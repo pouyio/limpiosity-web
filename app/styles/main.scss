@@ -1,34 +1,37 @@
+//--------------------------------------------------------------------
+//    VARIABLES
+//--------------------------------------------------------------------
+//  Colors
+$navbar-color: #E7FAFF;
+// Sizes
+//    fonts
+$main_title: 4.7em;
+$main_title_mobile: 3em;
+$main_subtitle: 1.7em;
+$main_subtitle_mobile: 1em;
+$down-arrow-size: 4em;
+//    Other
+$blur_px: 5px;
+$social_size: 50px; //    END-VARIABLES
+//--------------------------------------------------------------------
 body {
   background: #fafafa;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
-//TODO DELETE
-* {
-  transition: 2s;
-}
 .panel {
   //to avoid inner elements margins going outside
+  //TODO maybe it's not needed, try deleting when all panels are copmpleted
   overflow: auto;
-  font-family: 'Arvo', serif;
+  padding: 0 1em;
 }
-.social {
-  padding: 0;
-  font-size: 1.8em;
-  display: inline-block;
-  padding: 10px;
-  border-radius: 5px;
-  background: rgba(255,255,255,.6);
-  li {
-    display: inline-block;
-    padding: 0 10px;
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-  }
-}
+//--------------------------------------------------------------------
+//    PANEL-1
+//--------------------------------------------------------------------
 .panel-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   height: 100vh;
   color: white;
@@ -41,46 +44,123 @@ body {
     top: 0;
     z-index: -1;
     height: 100vh;
-    background: url("http://vicenteortiz.me/limpiosity/images/limpiosity.jpg") center/100% no-repeat;
+    background: url("/images/limpiosity.jpg") center/100% no-repeat;
     background-color: silver;
-    -webkit-filter: blur(5px) grayscale(60%);
+    filter:blur($blur_px) grayscale(60%);
   }
   h1 {
     font-weight: 700;
-    font-size: 4.7em;
-    margin: 0;
+    font-size: $main_title;
     color: white;
-    text-decoration: underline;
+    display: inline-block;
+    border-bottom: 10px double;
   }
   h2 {
-    color: red;
+    font-size: $main_subtitle;
   }
   .my-arrow {
     position: absolute;
     bottom: 5%;
-    left: calc(50% - 2em);
+    left: calc(50% - #{$down-arrow-size}/2);
     i {
-      color: red;
+      color: $navbar-color;
+      font-size: $down-arrow-size;
     }
   }
 }
+.social {
+  margin: .5em 0;
+  font-size: $social_size;
+  display: inline-block;
+  padding: 10px;
+  width: calc(100% - #{$blur_px}*4);
+  li {
+    display: inline-block;
+    padding: 0 10px;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+.fa {
+  transition: 0.2s linear;
+  &:hover {
+    transform: scale(1.5);
+    transition: 0.2s linear;
+  }
+}
+.fa-twitter {
+  color: #4099FF;
+}
+.fa-github {
+  color: black;
+  text-shadow: 0 0 2px white;
+}
+.fa-youtube-play {
+  color: #e52d27;
+}
+//--------------------------------------------------------------------
+//    PANEL-2
+//--------------------------------------------------------------------
 .panel-2 {
   background: aquamarine;
   text-align: center;
 }
+//--------------------------------------------------------------------
+//    PANEL-3
+//--------------------------------------------------------------------
 .panel-3 {
   background: cornflowerblue;
   text-align: center;
 }
+//--------------------------------------------------------------------
+//    PANEL-4
+//--------------------------------------------------------------------
 .panel-4 {
   background: darkseagreen;
   text-align: center;
 }
+//--------------------------------------------------------------------
+//    PANEL-5
+//--------------------------------------------------------------------
 .panel-5 {
   background: indianred;
   text-align: center;
 }
+//--------------------------------------------------------------------
+//    PANEL-6
+//--------------------------------------------------------------------
 .panel-6 {
   background: gainsboro;
   text-align: center;
+}
+//--------------------------------------------------------------------
+//    MEDIA QUERIES
+//--------------------------------------------------------------------
+@media all and (max-width:500px) {
+  .panel-1 {
+    justify-content: space-between;
+    h1 {
+      font-size: $main_title_mobile;
+    }
+    h2 {
+      font-size: $main_subtitle_mobile;
+    }
+    &:before {
+      background-image: none;
+      filter:none;
+    }
+    .my-arrow {
+      display: none;
+    }
+  }
+  .social li {
+    font-size: $social_size;
+    width: 30%;
+    padding: 0;
+  }
+  .fa:hover {
+    transform: none;
+  }
 }
