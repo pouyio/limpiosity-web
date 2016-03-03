@@ -1,0 +1,86 @@
+body {
+  background: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+//TODO DELETE
+* {
+  transition: 2s;
+}
+.panel {
+  //to avoid inner elements margins going outside
+  overflow: auto;
+  font-family: 'Arvo', serif;
+}
+.social {
+  padding: 0;
+  font-size: 1.8em;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(255,255,255,.6);
+  li {
+    display: inline-block;
+    padding: 0 10px;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
+.panel-1 {
+  text-align: center;
+  height: 100vh;
+  color: white;
+  text-shadow: 0 0 8px black;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    height: 100vh;
+    background: url("http://vicenteortiz.me/limpiosity/images/limpiosity.jpg") center/100% no-repeat;
+    background-color: silver;
+    -webkit-filter: blur(5px) grayscale(60%);
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 4.7em;
+    margin: 0;
+    color: white;
+    text-decoration: underline;
+  }
+  h2 {
+    color: red;
+  }
+  .my-arrow {
+    position: absolute;
+    bottom: 5%;
+    left: calc(50% - 2em);
+    i {
+      color: red;
+    }
+  }
+}
+.panel-2 {
+  background: aquamarine;
+  text-align: center;
+}
+.panel-3 {
+  background: cornflowerblue;
+  text-align: center;
+}
+.panel-4 {
+  background: darkseagreen;
+  text-align: center;
+}
+.panel-5 {
+  background: indianred;
+  text-align: center;
+}
+.panel-6 {
+  background: gainsboro;
+  text-align: center;
+}
