@@ -6,11 +6,12 @@ $navbar-color: #E7FAFF;
 // Sizes
 //    fonts
 $main_title: 4.7em;
-$main_title_mobile: 3em;
-$main_subtitle: 1.7em;
+$main_title_mobile: 3.5em;
+$main_subtitle: 1.4em;
 $main_subtitle_mobile: 1em;
 $down-arrow-size: 4em;
 //    Other
+$section1_background: "/images/limpiosity.jpg";
 $blur_px: 5px;
 $social_size: 50px; //    END-VARIABLES
 //--------------------------------------------------------------------
@@ -29,11 +30,6 @@ body {
 //    PANEL-1
 //--------------------------------------------------------------------
 .panel-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 100vh;
   color: white;
   text-shadow: 0 0 8px black;
   &:before {
@@ -44,23 +40,33 @@ body {
     top: 0;
     z-index: -1;
     height: 100vh;
+    background-image: url($section1_background) center/100%;
+    background-repeat: no-repeat;
     background: url("/images/limpiosity.jpg") center/100% no-repeat;
     background-color: silver;
-    filter:blur($blur_px) grayscale(60%);
+    filter:blur($blur_px);
+  }
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   h1 {
     font-weight: 700;
     font-size: $main_title;
-    color: white;
     display: inline-block;
     border-bottom: 10px double;
+    margin-bottom: 20px;
   }
   h2 {
     font-size: $main_subtitle;
   }
   .my-arrow {
     position: absolute;
-    bottom: 5%;
+    bottom: 3%;
     left: calc(50% - #{$down-arrow-size}/2);
     i {
       color: $navbar-color;
@@ -140,7 +146,9 @@ body {
 //--------------------------------------------------------------------
 @media all and (max-width:500px) {
   .panel-1 {
-    justify-content: space-between;
+    section {
+      justify-content: space-around;
+    }
     h1 {
       font-size: $main_title_mobile;
     }
@@ -148,8 +156,7 @@ body {
       font-size: $main_subtitle_mobile;
     }
     &:before {
-      background-image: none;
-      filter:none;
+      background: url($section1_background) 50% 50%;
     }
     .my-arrow {
       display: none;
