@@ -22,7 +22,7 @@ html {
     font-size: 1.5rem;
     @include breakpoint(mobile) {
       font-size: 1rem;
-    };
+    }
   }
   i {
     font-size: 2.8rem;
@@ -41,12 +41,23 @@ html {
 
 .section-title {
   font-size: 2.7rem;
-  // font-weight: bolder;
 }
 
 .panel-2 {
   h1 {
     color: $section-title-compl;
   }
-
+}
+.panel-3 {
+  h1 {
+    color: $section-title-main;
+  }
+}
+.panel-4 {
+  h1 {
+    color: $section-title-compl;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
 }
