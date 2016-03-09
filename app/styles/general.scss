@@ -1,0 +1,19 @@
+@import 'normalize';
+@import 'bits';
+@import 'typography';
+@import 'panel-1';
+@import 'panel-2';
+@import 'panel-3';
+// @import 'panel-4';
+// @import 'panel-5';
+// @import 'panel-6';
+* {
+  transition: all 200ms ease-in-out;
+}
+
+body > div {
+  padding: 1.5em;
+}
+.panel-1 {
+  padding: 0 1em;
+}

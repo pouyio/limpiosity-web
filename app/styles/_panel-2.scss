@@ -1,0 +1,33 @@
+.panel-2 {
+
+  column-count: 2;
+  @include breakpoint(tablet) {
+    column-count: 1;
+  }
+  column-gap: 2em;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 850px;
+  position: relative;
+
+  h1 {
+    column-span: all;
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+  }
+  .fa {
+    color: $bg-icons-color;
+    display: inline-block;
+    font-size: 25rem;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    z-index: -1;
+    @include breakpoint(tablet) {
+      font-size: 15rem;
+      right: 0%;
+      top: 0%;
+    }
+  }
+}

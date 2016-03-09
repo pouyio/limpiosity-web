@@ -1,0 +1,34 @@
+//*********************
+//VARIABLES
+//*********************
+// COLORS--------------
+$panel-1-bg-callback: #c0c0c0;
+$section-title-main: #fff;
+$section-title-second: #4a4a4a;
+$section-title-compl: #78bdf2;
+$text-shadow-dark: #000;
+
+$twitter-color: #4099ff;
+$github-color: #000;
+$github-bg: 0 0 2px #fff;
+$youtube-color: #e52d27;
+$navbar-color: #e7faff;
+
+$arrow-size: 2.5rem;
+
+$bg-icons-color: rgba(0, 0, 0, .07);
+
+//*********************
+//BREAKPOINTS
+//*********************
+@mixin breakpoint($point) {
+  @if $point == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }@else if $point == mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}
