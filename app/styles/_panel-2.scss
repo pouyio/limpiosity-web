@@ -1,19 +1,38 @@
 .panel-2 {
-
-  column-count: 2;
-  @include breakpoint(tablet) {
-    column-count: 1;
-  }
-  column-gap: 2em;
+  // column-count: 2;
+  // @include breakpoint(tablet) {
+  //   column-count: 1;
+  // }
+  // column-gap: 2em;
   line-height: 1.5;
   margin: 0 auto;
   max-width: 850px;
   position: relative;
-
   h1 {
-    column-span: all;
     @include breakpoint(tablet) {
       text-align: center;
+    }
+  }
+  .container {
+    $margin: .6em;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    .first {
+      margin-right: $margin;
+    }
+    .last {
+      margin-left: $margin;
+    }
+    @include breakpoint(tablet) {
+      align-items: stretch;
+      flex-direction: column;
+      .first {
+        margin-right: 0;
+      }
+      .last {
+        margin-left: 0;
+      }
     }
   }
   .fa {
@@ -26,8 +45,8 @@
     z-index: -1;
     @include breakpoint(tablet) {
       font-size: 15rem;
-      right: 0%;
-      top: 0%;
+      right: 0;
+      top: 0;
     }
   }
 }
