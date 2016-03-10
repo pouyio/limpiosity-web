@@ -1,0 +1,36 @@
+.panel-5 {
+  background-color: $section-title-compl;
+  line-height: 1.5;
+  h1 {
+    color: $section-title-main;
+    text-align: right;
+  }
+  .container {
+    $margin: .6em;
+    display: flex;
+    flex-direction: row;
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+    .first {
+      flex: 1;
+      margin-right: $margin * 10;
+      margin-top: 0;
+      @include breakpoint(tablet) {
+        margin-right: 0;
+      }
+    }
+    .maps {
+      flex: 1.2;
+      margin-left: $margin;
+      @include breakpoint(tablet) {
+        height: 280px;
+        margin-left: 0;
+      }
+      @include breakpoint(mobile) {
+        //take all space, body padding included
+        margin: - $global-padding-mobile;
+      }
+    }
+  }
+}

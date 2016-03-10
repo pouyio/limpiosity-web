@@ -1,5 +1,4 @@
 .panel-2 {
-
   line-height: 1.5;
   position: relative;
   .container {
@@ -24,7 +23,7 @@
       }
     }
   }
-  .fa {
+  .fa-cog {
     color: $bg-icons-color;
     display: inline-block;
     font-size: 25rem;
@@ -38,5 +37,6 @@
       top: 0;
     }
   }
+  // TODO No funciona, arreglar
   transition: $transition-general;
 }

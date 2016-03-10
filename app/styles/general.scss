@@ -5,14 +5,25 @@
 @import 'panel-2';
 @import 'panel-3';
 @import 'panel-4';
-// @import 'panel-5';
-// @import 'panel-6';
+@import 'panel-5';
+@import 'panel-6';
 // * {
 //   transition: all 200ms ease-in-out;
 // }
-
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  ::selection {
+    background: $selection;
+  }
+}
 body > div {
   padding: 1.5em;
+  @include breakpoint(mobile) {
+    padding: $global-padding-mobile;
+  }
 }
 .wrapper {
   margin: 0 auto;

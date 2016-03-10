@@ -13,10 +13,6 @@
   <!-- build:css styles/main.css -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  <!--TODO Not used, delete-->
-  <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
-
   <link rel="stylesheet" href="styles/general.css">
   <!-- endbuild -->
 
@@ -56,7 +52,7 @@
 
   <div id="panel-2" class="panel panel-2">
     <div class="wrapper">
-      <h1 class="section-title">Por qué</h1>
+      <h1 class="section-title">Por qué <i class="fa fa-question"></i></h1>
       <i class="fa fa-cog"></i>
       <div class="container">
         <p class="first">
@@ -82,7 +78,7 @@
 
   <div class="panel panel-4">
     <div class="wrapper">
-      <h1 class="section-title">Quién</h1>
+      <h1 class="section-title">Quién <i class="fa fa-group"></i></h1>
       <div class="who-wrapper">
         <!-- MANU -->
         <div class="item manu-item">
@@ -90,7 +86,7 @@
           <h3 class="name">Manu Rubio</h3>
           <ul class="contact-list">
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
           </ul>
           <p class="description">
             Apasionado de las nuevas tecnologías. Aunque ha programado en varias plataformas, no domina ninguna. Actualmente master noob en desarrollo web
@@ -101,9 +97,9 @@
         <div class="item david-item">
           <img src="/images/david.png" alt="david" />
           <h3 class="name">David Martinez</h3>
-          <ul>
+          <ul class="contact-list">
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
           </ul>
           <p class="description">
             Apasionado de las nuevas tecnologías. Aunque ha programado en varias plataformas, no domina ninguna. Actualmente master noob en desarrollo web
@@ -114,9 +110,10 @@
         <div class="item vicente-item">
           <img src="/images/vicente.png" alt="vicente" />
           <h3 class="name">Vicente Ortiz</h3>
-          <ul>
+          <ul class="contact-list">
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
           </ul>
           <p class="description">
             Apasionado de las nuevas tecnologías. Aunque ha programado en varias plataformas, no domina ninguna. Actualmente master noob en desarrollo web
@@ -128,17 +125,51 @@
 
   <div class="panel panel-5">
     <div class="wrapper">
-      <h1 class="section-title">Dónde</h1>
+      <h1 class="section-title">Dónde <i class="fa fa-location-arrow"></i></h1>
+      <div class="container">
+        <p class="first">
+          Tanto el robot como las piezas nuevas se encuentran en la Univerisdad de Castilla la Mancha, campus de Albacete, España.</br>Los espacios utilizados en el proyecto pertenecen a la politécnica de Albacete así como a la asociación universitaria
+          Qubic.
+          </br>Como breve introducción, Qubic es una asociación formada por (ex)estudiantes que se dedican a hacer proyectos de todo tipo, de ingeniería entre ellos, y la colaboración para este robot fue uno de ellos. No dude en entrar en su web y si
+          te gusta rodearte de gente inquieta y con ambición, ponerte en contacto con ellos.
+        </p>
+        <div id="googleMap" class="maps"></div>
+      </div>
     </div>
   </div>
 
   <div class="panel panel-6">
     <div class="wrapper">
       <h1 class="section-title">Contacto</h1>
+      <i class="fa fa-pencil"></i>
+      <form class="my-form" action="" method="post">
+        <div class="text-container form-name">
+          <label for="name">Nombre</label>
+          <input type="text" name="name" value="" placeholder="">
+        </div>
+        <div class="text-container form-email">
+          <label for="email">Email</label>
+          <input type="email" name="email">
+        </div>
+        <div class="text-container form-message">
+          <label for="message">Mensaje</label>
+          <textarea class="message" name="comment" id="comment" rows="4"></textarea>
+        </div>
+      </form>
+      <!-- <form id="contactform" action="" method="">
+        <input name="_redirect" type="hidden" id="name" value="">
+        <label for="name">Name</label>
+        <input name="name" type="text" id="name">
+        <input name="email" type="email" id="email">
+        <textarea name="comment" id="comment" rows="3"></textarea>
+        <input value="Submit" type="submit">
+      </form> -->
     </div>
   </div>
 
   <!-- build:js scripts/main.js -->
+  <script src="http://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 </body>

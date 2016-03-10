@@ -1,0 +1,61 @@
+.panel-6 {
+  // TODO implement forms with https://formsubmit.io/
+  position: relative;
+  .section-title {
+    color: $section-title-compl;
+  }
+  .my-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .text-container {
+      display: inline-block;
+      position: relative;
+    }
+    div {
+      box-sizing: border-box;
+      margin-bottom: 5em;
+      margin-top: 1em;
+      padding: 1em;
+      width: 50%;
+      @include breakpoint(mobile) {
+        width: 95%;
+      }
+    }
+    .form-message {
+      width: 100%;
+      @include breakpoint(mobile) {
+        width: 95%;
+      }
+    }
+  }
+  input,
+  textarea {
+    border: 0;
+    border-bottom: solid 2px $bg-icons-color;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  label {
+    position: absolute;
+  }
+  .fa-pencil {
+    $size: 35rem;
+    $size-mobile: 20rem;
+    color: $bg-icons-color;
+    display: inline-block;
+    font-size: $size;
+    left: calc(50% - #{$size} / 2);
+    position: absolute;
+    top: calc(50% - #{$size} / 2);
+    z-index: -1;
+    @include breakpoint(mobile) {
+      font-size: $size-mobile;
+      left: calc(50% - #{$size-mobile} / 2);
+      position: absolute;
+      top: calc(50% - #{$size-mobile} / 2);
+    }
+  }
+}

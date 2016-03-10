@@ -1,10 +1,10 @@
 .panel-4 {
+  $padding: 1em;
   background-color: $section-title-main;
   .who-wrapper {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     @include breakpoint(tablet) {
       flex-direction: column;
     }
@@ -13,10 +13,7 @@
     $shadows: 0 1px 5px $items-border;
     $shadower: 0 3px 8px darken($items-border, 30%);
     box-shadow: $shadows;
-    margin: {
-      bottom: .5em;
-      top: .5em;
-    }
+    margin: .5em 1em;
     max-width: 30%;
     padding: .5em;
     transition: $transition-general;
@@ -27,31 +24,75 @@
       }
     }
     @include breakpoint(tablet) {
+      margin: {
+        left: 0;
+        right: 0;
+      }
       max-width: 100%;
     }
     h3 {
+      margin: .8em 0;
       text-align: center;
       text-decoration: underline;
+      @include breakpoint(tablet) {
+        float: left;
+        padding-left: $padding;
+      }
+      @include breakpoint(mobile) {
+        // font-size: em;
+        float: none;
+        padding-left: 0;
+      }
     }
     img {
+      $scale: .8;
       clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-      height: 280px;
+      height: 250px;
       max-width: 100%;
+      transform: scale($scale, $scale);
       @include breakpoint(tablet) {
         display: none;
       }
     }
     .description {
-      padding: 1.3em 1em;
+      clear: both;
+      padding: 0 $padding $padding;
     }
   }
   .contact-list {
-    // display: block;
+    display: flex;
+    justify-content: center;
     padding: 0;
-
     li {
-      display: inline-block;
-      padding: 0;
+      list-style: none;
+      padding: 0 .3em;
+      @include breakpoint(mobile) {
+        flex-grow: 1;
+        text-align: center;
+      }
+    }
+    .fa {
+      font-size: $contacts-size;
+      @include breakpoint(mobile) {
+        font-size: $contacts-size + .8em;
+      }
+    }
+    .fa-twitter {
+      color: $twitter-color;
+    }
+    .fa-envelope-o {
+      color: $section-title-second;
+    }
+    .fa-facebook-official {
+      color: $facebook-color;
+    }
+    @include breakpoint(tablet) {
+      float: right;
+      padding-right: $padding;
+    }
+    @include breakpoint(mobile) {
+      float: none;
+      padding-right: 0;
     }
   }
 }
