@@ -1,11 +1,7 @@
 .panel-2 {
+
   line-height: 1.5;
   position: relative;
-  h1 {
-    @include breakpoint(tablet) {
-      text-align: center;
-    }
-  }
   .container {
     $margin: .6em;
     align-items: flex-start;
@@ -42,4 +38,5 @@
       top: 0;
     }
   }
+  transition: $transition-general;
 }

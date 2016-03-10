@@ -7,9 +7,9 @@
 @import 'panel-4';
 // @import 'panel-5';
 // @import 'panel-6';
-* {
-  transition: all 200ms ease-in-out;
-}
+// * {
+//   transition: all 200ms ease-in-out;
+// }
 
 body > div {
   padding: 1.5em;
@@ -17,4 +17,12 @@ body > div {
 .wrapper {
   margin: 0 auto;
   max-width: 850px;
+}
+.panel {
+  transition: $transition-general;
+  .section-title {
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+  }
 }

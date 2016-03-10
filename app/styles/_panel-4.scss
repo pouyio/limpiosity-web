@@ -1,0 +1,57 @@
+.panel-4 {
+  background-color: $section-title-main;
+  .who-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+  }
+  .item {
+    $shadows: 0 1px 5px $items-border;
+    $shadower: 0 3px 8px darken($items-border, 30%);
+    box-shadow: $shadows;
+    margin: {
+      bottom: .5em;
+      top: .5em;
+    }
+    max-width: 30%;
+    padding: .5em;
+    transition: $transition-general;
+    &:hover {
+      box-shadow: $shadower;
+      @include breakpoint(mobile) {
+        box-shadow: $shadows;
+      }
+    }
+    @include breakpoint(tablet) {
+      max-width: 100%;
+    }
+    h3 {
+      text-align: center;
+      text-decoration: underline;
+    }
+    img {
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      height: 280px;
+      max-width: 100%;
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+    .description {
+      padding: 1.3em 1em;
+    }
+  }
+  .contact-list {
+    // display: block;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 0;
+    }
+  }
+}

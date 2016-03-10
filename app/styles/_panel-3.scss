@@ -6,12 +6,9 @@
   height: 70vh;
   position: relative;
   z-index: -2;
-  h1 {
+  .section-title {
     text-align: right;
     z-index: 10;
-    @include breakpoint(tablet) {
-      text-align: center;
-    }
   }
   .fa {
     color: $bg-icons-color;
