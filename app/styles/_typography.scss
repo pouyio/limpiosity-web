@@ -15,7 +15,7 @@ html {
 
 .panel-1 {
   color: $section-title-main;
-  text-shadow: 0 0 .5em $text-shadow-dark;
+  text-shadow: 0 0 0.5em $text-shadow-dark;
   h1 {
     font-size: 4.3rem;
     @include breakpoint(mobile) {
@@ -35,6 +35,11 @@ html {
     i {
       color: $navbar-color;
       font-size: $arrow-size;
+      @include breakpoint(tablet) {
+        @media all and (orientation: landscape) {
+          display: none;
+        }
+      }
     }
   }
   a {
