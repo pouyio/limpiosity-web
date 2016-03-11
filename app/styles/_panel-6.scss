@@ -19,27 +19,36 @@
       padding: 1em;
       width: 50%;
       @include breakpoint(mobile) {
-        width: 95%;
+        width: 100%;
       }
     }
     .form-message {
       width: 100%;
-      @include breakpoint(mobile) {
-        width: 95%;
-      }
     }
   }
   input,
   textarea {
+    $transparend: rgba(0, 0, 0, 0);
+    background: $transparend;
     border: 0;
     border-bottom: solid 2px $bg-icons-color;
     width: 100%;
     &:focus {
+      border-bottom: solid 2px $section-title-compl;
       outline: none;
+      transition: $transition-general;
     }
   }
   label {
     position: absolute;
+    top: 1em;
+    transition-duration: $transition-general * 2;
+    transition-property: color top font-size;
+    z-index: -1;
+
+  }
+  .message-label {
+    top: 3em;
   }
   .fa-pencil {
     $size: 35rem;
