@@ -6,31 +6,38 @@
   height: 70vh;
   position: relative;
   z-index: -2;
+
   .section-title {
     text-align: right;
     z-index: 10;
   }
+
   .fa {
     color: $bg-icons-color;
     display: inline-block;
     font-size: 25rem;
     position: absolute;
     z-index: -1;
+
     @include breakpoint(tablet) {
       font-size: 15rem;
     }
   }
+
   .fa-file-image-o {
     right: $bg-icons-margin;
     top: $bg-icons-margin;
+
     @include breakpoint(tablet) {
       right: calc(50% - #{$bg-icons-size}/2);
       top: 0;
     }
   }
+
   .fa-film {
     bottom: $bg-icons-margin;
     left: $bg-icons-margin;
+
     @include breakpoint(tablet) {
       bottom: 0;
       left: calc(50% - #{$bg-icons-size}/2);

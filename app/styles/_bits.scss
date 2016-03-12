@@ -10,7 +10,8 @@ $text-shadow-dark: #000;
 
 $twitter-color: #4099ff;
 $github-color: #000;
-$github-bg: 0 0 2px #fff;
+$github-bg-color: #fff;
+$github-bg: 0 0 2px $github-bg-color;
 $facebook-color: #3b5998;
 $youtube-color: #e52d27;
 $navbar-color: #e7faff;

@@ -1,31 +1,38 @@
 .panel-6 {
   // TODO implement forms with https://formsubmit.io/
   position: relative;
+
   .section-title {
     color: $section-title-compl;
   }
+
   .my-form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
     .text-container {
       display: inline-block;
       position: relative;
     }
+
     div {
       box-sizing: border-box;
       margin-bottom: 5em;
       margin-top: 1em;
       padding: 1em;
       width: 50%;
+
       @include breakpoint(mobile) {
         width: 100%;
       }
     }
+
     .form-message {
       width: 100%;
     }
   }
+
   input,
   textarea {
     $transparend: rgba(0, 0, 0, 0);
@@ -39,20 +46,23 @@
       transition: $transition-general;
     }
   }
+
   label {
     position: absolute;
     top: 1em;
     transition-duration: $transition-general * 2;
     transition-property: color top font-size;
     z-index: -1;
-
   }
+
   .message-label {
     top: 3em;
   }
+
   .submit-button {
     background: $bg-icons-color;
   }
+
   .fa-pencil {
     $size: 35rem;
     $size-mobile: 20rem;
@@ -63,6 +73,7 @@
     position: absolute;
     top: calc(50% - #{$size} / 2);
     z-index: -1;
+
     @include breakpoint(mobile) {
       font-size: $size-mobile;
       left: calc(50% - #{$size-mobile} / 2);

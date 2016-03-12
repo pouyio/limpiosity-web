@@ -1,6 +1,6 @@
 .panel-1 {
   padding: 0 1em;
-  &:before {
+  &::before {
     background: url('/images/limpiosity.jpg') center / 100% no-repeat;
     @include breakpoint(tablet) {
       background-image: none;

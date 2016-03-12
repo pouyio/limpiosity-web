@@ -1,14 +1,17 @@
 .panel-4 {
   $padding: 1em;
   background-color: $section-title-main;
+
   .who-wrapper {
     align-items: center;
     display: flex;
     flex-direction: row;
+
     @include breakpoint(tablet) {
       flex-direction: column;
     }
   }
+
   .item {
     $shadows: 0 1px 5px $items-border;
     $shadower: 0 3px 8px darken($items-border, 30%);
@@ -17,12 +20,7 @@
     max-width: 30%;
     padding: .5em;
     transition: $transition-general;
-    &:hover {
-      box-shadow: $shadower;
-      @include breakpoint(mobile) {
-        box-shadow: $shadows;
-      }
-    }
+
     @include breakpoint(tablet) {
       margin: {
         left: 0;
@@ -30,69 +28,93 @@
       }
       max-width: 100%;
     }
+
+    &:hover {
+      box-shadow: $shadower;
+
+      @include breakpoint(mobile) {
+        box-shadow: $shadows;
+      }
+    }
+
     h3 {
       margin: .8em 0;
       text-align: center;
       text-decoration: underline;
+
       @include breakpoint(tablet) {
         float: left;
         padding-left: $padding;
       }
+
       @include breakpoint(mobile) {
         // font-size: em;
         float: none;
         padding-left: 0;
       }
     }
+
     img {
       $scale: .8;
       clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
       height: 250px;
       max-width: 100%;
       transform: scale($scale, $scale);
+
       @include breakpoint(tablet) {
         display: none;
       }
     }
+
     .description {
       clear: both;
       padding: 0 $padding $padding;
     }
   }
+
   .contact-list {
     display: flex;
     justify-content: center;
     padding: 0;
+
+    @include breakpoint(tablet) {
+      float: right;
+      padding-right: $padding;
+    }
+
+    @include breakpoint(mobile) {
+      float: none;
+      padding-right: 0;
+    }
+
     li {
       list-style: none;
       padding: 0 .3em;
+
       @include breakpoint(mobile) {
         flex-grow: 1;
         text-align: center;
       }
     }
+
     .fa {
       font-size: $contacts-size;
+
       @include breakpoint(mobile) {
         font-size: $contacts-size + .8em;
       }
     }
+
     .fa-twitter {
       color: $twitter-color;
     }
+
     .fa-envelope-o {
       color: $section-title-second;
     }
+
     .fa-facebook-official {
       color: $facebook-color;
-    }
-    @include breakpoint(tablet) {
-      float: right;
-      padding-right: $padding;
-    }
-    @include breakpoint(mobile) {
-      float: none;
-      padding-right: 0;
     }
   }
 }
