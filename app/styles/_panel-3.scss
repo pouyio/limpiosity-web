@@ -2,10 +2,19 @@
   $bg-icons-margin: 10px;
   $bg-icons-size: 15rem;
   background-color: $section-title-compl;
-  //TODO quitar cuando se implementa la galería
-  height: 70vh;
   position: relative;
   z-index: -2;
+
+  figure {
+    margin: 0;
+  }
+
+  .bss-slides {
+    @include breakpoint(mobile) {
+      //take all space, body padding included
+      margin: - $global-padding-mobile;
+    }
+  }
 
   .section-title {
     text-align: right;

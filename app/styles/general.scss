@@ -1,6 +1,7 @@
 @import 'normalize';
 @import 'bits';
 @import 'typography';
+@import 'better-simple-slideshow';
 @import 'panel-1';
 @import 'panel-2';
 @import 'panel-3';
@@ -13,24 +14,31 @@
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
+
   ::selection {
     background: $selection;
   }
-}
-body > div {
-  padding: 1.5em;
-  @include breakpoint(mobile) {
-    padding: $global-padding-mobile;
+
+  > div {
+    padding: 1.5em;
+
+    @include breakpoint(mobile) {
+      padding: $global-padding-mobile;
+    }
   }
 }
+
 .wrapper {
   margin: 0 auto;
   max-width: 850px;
 }
+
 .panel {
   transition: $transition-general;
+
   .section-title {
     @include breakpoint(tablet) {
       text-align: center;

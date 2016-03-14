@@ -15,7 +15,9 @@
   var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
   marker.setMap(map);
 
-
+  // SLIDESHOW
+console.log('this is workings');
+makeBSS('.bss-slides');
 })();
 // CONTACT FORM
 function onFocus(element) {
@@ -29,7 +31,6 @@ function onFocus(element) {
 function focusLost(element) {
   var lb = element.getAttribute("name");
   var label = document.getElementById(lb);
-  console.log(element.value);
   if(element.value == "") {
     if(label == "message") {
       label.style.top = "3em";
