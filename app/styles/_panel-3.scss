@@ -3,12 +3,12 @@
   $bg-icons-size: 15rem;
   background-color: $section-title-compl;
   position: relative;
-  z-index: -2;
 
   figure {
     margin: 0;
   }
 
+  // SLIDESHOW FROM https://github.com/leemark/better-simple-slideshow
   .bss-slides {
     @include breakpoint(mobile) {
       //take all space, body padding included
@@ -18,7 +18,6 @@
 
   .section-title {
     text-align: right;
-    z-index: 10;
   }
 
   .fa {

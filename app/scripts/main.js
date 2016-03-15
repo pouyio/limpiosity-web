@@ -16,8 +16,13 @@
   marker.setMap(map);
 
   // SLIDESHOW
+  var opts = {
+    auto : false,
+    fullScreen : false,
+    swipe : true
+};
 console.log('this is workings');
-makeBSS('.bss-slides');
+makeBSS('.bss-slides', opts);
 })();
 // CONTACT FORM
 function onFocus(element) {

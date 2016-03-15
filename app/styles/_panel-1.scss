@@ -1,10 +1,8 @@
 .panel-1 {
   padding: 0 1em;
+
   &::before {
     background: url('/images/limpiosity.jpg') center / 100% no-repeat;
-    @include breakpoint(tablet) {
-      background-image: none;
-    }
     background-color: $panel-1-bg-callback;
     background-repeat: no-repeat;
     content: '';
@@ -15,43 +13,57 @@
     right: 0;
     top: 0;
     z-index: -1;
+
+    @include breakpoint(tablet) {
+      background-image: none;
+    }
   }
+
   .my-arrow {
     bottom: 5%;
     left: calc(50% - #{$arrow-size} / 2);
     position: absolute;
   }
+
   .fa {
     font-size: 4rem;
+
     &:hover {
       transform: scale(1.3);
       transition: .2s linear;
+
       @include breakpoint(tablet) {
         transform: none;
       }
     }
   }
+
   .fa-twitter {
     color: $twitter-color;
   }
+
   .fa-github {
     color: $github-color;
     text-shadow: $github-bg;
   }
+
   .fa-youtube-play {
     color: $youtube-color;
   }
 }
+
 .social {
   display: inline-block;
   // margin: .5em 0;
   padding: 10px;
   width: calc(100% - 5*4);
+
   li {
     display: inline-block;
     padding: 0 10px;
   }
 }
+
 section {
   align-items: center;
   display: flex;

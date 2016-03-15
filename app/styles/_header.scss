@@ -1,11 +1,38 @@
 .navbar {
+  $dark-percentage: 20%;
+
   ul {
-    background: red;
+    align-items: baseline;
+    background: $header-color;
+    border-bottom: 2px solid darken($section-title-main, $dark-percentage);
+    display: flex;
+    justify-content: center;
     list-style-type: none;
     margin: 0;
-    padding: .5em;
+    padding: .2em;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
+  }
+
+  .nav-item {
+    display: inline-block;
+    flex-grow: 1;
+    padding: .5em;
+
+    &:first-child {
+      flex-grow: 1000;
+    }
+
+    .logo {
+      color: $section-title-main;
+      font-size: 1.5em;
+    }
+  }
+
+  a {
+    color: darken($section-title-main, $dark-percentage);
+    text-decoration: none;
   }
 }
