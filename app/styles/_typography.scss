@@ -14,6 +14,18 @@ html {
   }
 }
 
+header {
+  a {
+    color: darken($section-title-main, $dark-percentage);
+    text-decoration: none;
+  }
+
+  .logo {
+    color: $section-title-main;
+    font-size: 1.5em;
+  }
+}
+
 .panel-1 {
   color: $section-title-main;
   text-shadow: 0 0 .5em $text-shadow-dark;
@@ -91,9 +103,12 @@ html {
   p {
     color: $section-title-main;
   }
-  // .panel-6 {
-  //   label {
-  //     font-size: 1em;
-  //   }
-  // }
+}
+
+footer {
+  @include breakpoint(mobile) {
+    p {
+      font-size: .8em;
+    }
+  }
 }

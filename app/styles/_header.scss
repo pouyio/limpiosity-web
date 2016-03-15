@@ -1,6 +1,4 @@
 .navbar {
-  $dark-percentage: 20%;
-
   ul {
     align-items: baseline;
     background: $header-color;
@@ -14,6 +12,10 @@
     top: 0;
     width: 100%;
     z-index: 10;
+
+    @include breakpoint(mobile) {
+      flex-direction: column;
+    }
   }
 
   .nav-item {
@@ -21,18 +23,25 @@
     flex-grow: 1;
     padding: .5em;
 
-    &:first-child {
-      flex-grow: 1000;
+    @include breakpoint(mobile) {
+      // AÑADIR CLASES PARA MOSTRAR Y NO MOSTRAR SEGÚN SEA PULSADO UN BOTON DE MENÚ, EN MAIN.JS
+      // display: none;
     }
 
-    .logo {
-      color: $section-title-main;
-      font-size: 1.5em;
+    &:first-child {
+      flex-grow: 1000;
+
+      @include breakpoint(mobile) {
+        display: inline-block;
+      }
     }
   }
 
-  a {
-    color: darken($section-title-main, $dark-percentage);
-    text-decoration: none;
+  .logo {
+    @include breakpoint(mobile) {
+      &:hover {
+        color: red;
+      }
+    }
   }
 }

@@ -1,0 +1,11 @@
+footer {
+  background: $header-color;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    color: $section-title-main;
+    display: inline-block;
+    margin: .3em;
+  }
+}
