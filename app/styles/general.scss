@@ -2,6 +2,7 @@
 @import 'bits';
 @import 'typography';
 @import 'better-simple-slideshow';
+@import 'responsive-nav';
 @import 'header';
 @import 'footer';
 @import 'panel-1';
@@ -10,9 +11,7 @@
 @import 'panel-4';
 @import 'panel-5';
 @import 'panel-6';
-// * {
-//   transition: all 200ms ease-in-out;
-// }
+
 html {
   height: 100%;
 }

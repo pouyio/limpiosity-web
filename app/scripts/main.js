@@ -1,7 +1,4 @@
 (function initialize() {
-  // NAVBAR
-
-
   // MAP
   var albacete = new google.maps.LatLng(38.9942400, -1.8564300)
   var mapProp = {

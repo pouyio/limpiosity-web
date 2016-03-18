@@ -19,16 +19,27 @@
 
 <body>
   <!--[if lt IE 10]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
-  <header>
-    <nav class="navbar">
-      <ul id="menu">
-        <li class="nav-item"><a class="logo" href="#">Limpiosity</a></li>
+  <!-- <header>
+    <a href="#" class="logo">Limpiosity</a>
+    <nav class="nav-collapse">
+      <ul>
         <li class="nav-item"><a href="#">Componentes</a></li>
         <li class="nav-item"><a href="#">Circuitos</a></li>
         <li class="nav-item"><a href="#">Código</a></li>
       </ul>
     </nav>
-  </header>
+  </header> -->
+  <nav role="navigation" id="nav">
+    <input class="trigger" type="checkbox" id="mainNavButton">
+    <label for="mainNavButton" onclick><a href="#">Limpiosity</a></label>
+    <ul>
+      <li class="logo"><a href="#">Limpiosity</a></li>
+      <li><a href="#">Componentes</a></li>
+      <li><a href="#">Circuitos</a></li>
+      <li><a href="#">Código</a></li>
+    </ul>
+    </ul>
+  </nav>
 
   <div class="panel panel-1">
     <section>
@@ -220,7 +231,7 @@
   <!-- build:js scripts/main.js -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
   <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-  <script src="scripts/jquery.slicknav.min.js"></script>
+  <script type="text/javascript" src="scripts/better-simple-slideshow.min.js"></script>
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
 </body>
