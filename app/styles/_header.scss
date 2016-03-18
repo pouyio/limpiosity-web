@@ -18,6 +18,7 @@
 
     li {
       flex: 1;
+      min-width: min-content;
 
       @include breakpoint(mobile) {
         border-bottom: $border-bottom;
@@ -33,7 +34,7 @@
   }
 
   .logo {
-    flex: 1000;
+    flex: 10;
 
     @include breakpoint(mobile) {
       display: none;
