@@ -1,8 +1,59 @@
 (function initialize() {
   // REVEAL EFFECTS https://github.com/jlmakes/scrollreveal.js
   window.sr = ScrollReveal();
-  sr.reveal('#panel-2-first', {origin: "left", delay: "200", distance: "200px", mobile: "false", reset: "true"});
-  sr.reveal('#panel-2-second', {origin: "rigt"});
+  sr.reveal('#panel-2-first', {
+    origin: "left",
+    distance: "100%",
+    duration: 500,
+    delay: 300,
+    reset: "true",
+    easing: "ease-out",
+    scale: 1
+  });
+  sr.reveal('#panel-2-second', {
+    origin: "right",
+    distance: "100%",
+    duration: 500,
+    delay: 600,
+    reset: "true",
+    easing: "ease-out",
+    scale: 1
+  });
+  sr.reveal('#panel-3-fa', {
+    duration: 1000,
+    delay: 300,
+    reset: "true",
+    easing: "ease-in-out",
+    rotate: {
+      z: 120
+    }
+  });
+  sr.reveal('#panel-4-manu', {
+    origin: "left",
+    distance: "50%",
+    duration: 500,
+    delay: 300,
+    reset: "true",
+    easing: "ease-out",
+    scale: 1
+  });
+  sr.reveal('#panel-4-vicente', {
+    origin: "right",
+    distance: "50%",
+    duration: 500,
+    delay: 300,
+    reset: "true",
+    easing: "ease-out",
+    scale: 1
+  });
+  sr.reveal('#panel-4-david', {
+    distance: "20%",
+    duration: 500,
+    delay: 300,
+    reset: "true",
+    easing: "ease-out",
+    scale: 1
+  });
 
   // MAP
   var albacete = new google.maps.LatLng(38.9942400, -1.8564300)
