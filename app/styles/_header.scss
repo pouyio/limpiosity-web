@@ -1,114 +1,58 @@
-// header {
-//   background-color: $header-color;
-//   left: 0;
-//   top: 0;
-//   position: fixed;
-//   width: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-//
-//   @include breakpoint(mobile) {
-//     flex-direction: column;
-//   }
-// }
-//
-// .logo {
-//   padding: .5em;
-// }
-//
-// .nav-collapse {
-//
-//   ul {
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: stretch;
-//
-//     @include breakpoint(mobile) {
-//       flex-direction: column;
-//     }
-//   }
-//
-//   .nav-item {
-//     background: red;
-//     width: auto;
-//     text-align: center;
-//     padding: .5em;
-//   }
-// }
-//
-// .nav-toggle {
-//   height: 20px;
-//   width: 20px;
-//   background: red;
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-// }
+// http://codepen.io/joe-watkins/pen/Emzxf
 
-$primaryColor: #021320; // dark blue
-$secondaryColor: #0F9962; // green
-$tertiaryColor: #005292; // light blue
+.nav-bar {
+  $border-bottom: 1px solid darken($header-color, 15%);
 
-$flex_nav_hoverColor: darken($secondaryColor,5%);
-$flex_nav_borderColor: darken($secondaryColor,10%);
-$flex_nav_linkColor: white;
-$flex_nav_hotdogsColor: white;
-
-$flex_nav_subNavWidth: 12.5em;
-$flex_nav_breakpoint: 48em;
-
-#nav {
+  background: $header-color;
   position: fixed;
   top: 0;
-  z-index: 10;
   width: 100%;
+  z-index: 10;
 
   ul {
     display: none;
-    width: 100%;
     list-style: none;
     margin: 0;
     padding: 0;
-
-    .logo {
-      @include breakpoint(mobile) {
-        display: none;
-      }
-    }
+    width: 100%;
 
     li {
-      a {
-        display: block;
-        padding: 1em;
-        background: $secondaryColor;
-        color: $flex_nav_linkColor;
-        text-decoration: none;
-        border-right: 1px solid $flex_nav_borderColor;
-        &:hover {
-          background: $flex_nav_hoverColor;
-        }
-      }
-      &:last-of-type {
-        a {
-          border-right: 0;
-        }
+      flex: 1;
+
+      @include breakpoint(mobile) {
+        border-bottom: $border-bottom;
       }
     }
-    // li
 
+    a {
+      color: $section-title-main;
+      display: block;
+      padding: .55em 1em;
+      text-align: center;
+    }
   }
-  // ul
 
-  input.trigger {
+  .logo {
+    flex: 1000;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+
+    a {
+      text-align: left;
+    }
+  }
+
+  .trigger {
+    left: -9999px;
     position: absolute;
     top: -9999px;
-    left: -9999px;
     &:checked ~ ul,
     &:checked ~ ul li ul {
-      display: block !important;
-      @media (min-width:$flex_nav_breakpoint) {
-        /* newer flexbox */
+      display: block;
+
+      @media (min-width:$mobile) {
         display: flex;
         flex-direction: row;
       }
@@ -116,46 +60,46 @@ $flex_nav_breakpoint: 48em;
   }
 
   label {
-    position: relative;
-    display: block;
-    min-height: 2em;
-    padding: .45em;
-    font-size: 1.1em;
-    margin: 0;
     cursor: pointer;
-    background: $tertiaryColor;
+    display: block;
     line-height: 2em;
-    color: lighten($primaryColor,80%);
+    margin: 0;
+    padding: .5em;
+    position: relative;
+
+    @include breakpoint(mobile) {
+      border-bottom: $border-bottom;
+    }
+
+    &::after {
+      color: $section-title-main;
+      content: '\2261';
+      font-size: 1.8em;
+      position: absolute;
+      right: 1em;
+      top: .2em;
+    }
+
+    a {
+      color: $section-title-main;
+    }
   }
 
-  label:after {
-    position: absolute;
-    right: 1em;
-    top: .2em;
-    content: '\2261';
-    font-size: 1.8em;
-    color: $flex_nav_hotdogsColor;
-  }
-
-  @media(min-width:$flex_nav_breakpoint) {
+  @media(min-width: $mobile) {
     ul {
-      /* newer flexbox */
+      align-items: baseline;
       display: flex;
       flex-direction: row;
 
       li {
+        flex: 1;
         position: relative;
         text-align: center;
-        flex: 1;
-        &:hover > ul {
-          display: block !important;
-        }
-
       }
     }
+
     label {
       display: none;
     }
   }
-
 }

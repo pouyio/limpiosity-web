@@ -33,13 +33,16 @@ $global-padding-mobile: .5em;
 //*********************
 //BREAKPOINTS
 //*********************
+
+$mobile: 480px;
+
 @mixin breakpoint($point) {
   @if $point == tablet {
     @media (max-width: 768px) {
       @content;
     }
   }@else if $point == mobile {
-    @media (max-width: 480px) {
+    @media (max-width: $mobile) {
       @content;
     }
   }

@@ -19,27 +19,19 @@
 
 <body>
   <!--[if lt IE 10]> <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p> <![endif]-->
-  <!-- <header>
-    <a href="#" class="logo">Limpiosity</a>
-    <nav class="nav-collapse">
+  <header>
+    <nav role="navigation" id="nav" class="nav-bar">
+      <input class="trigger" type="checkbox" id="mainNavButton">
+      <label for="mainNavButton" onclick><a href="#">Limpiosity</a></label>
       <ul>
-        <li class="nav-item"><a href="#">Componentes</a></li>
-        <li class="nav-item"><a href="#">Circuitos</a></li>
-        <li class="nav-item"><a href="#">Código</a></li>
+        <li class="logo"><a href="#">Limpiosity</a></li>
+        <li><a href="#">Componentes</a></li>
+        <li><a href="#">Circuitos</a></li>
+        <li><a href="#">Código</a></li>
+      </ul>
       </ul>
     </nav>
-  </header> -->
-  <nav role="navigation" id="nav">
-    <input class="trigger" type="checkbox" id="mainNavButton">
-    <label for="mainNavButton" onclick><a href="#">Limpiosity</a></label>
-    <ul>
-      <li class="logo"><a href="#">Limpiosity</a></li>
-      <li><a href="#">Componentes</a></li>
-      <li><a href="#">Circuitos</a></li>
-      <li><a href="#">Código</a></li>
-    </ul>
-    </ul>
-  </nav>
+  </header>
 
   <div class="panel panel-1">
     <section>
@@ -75,12 +67,12 @@
       <h1 class="section-title">Por qué <i class="fa fa-question"></i></h1>
       <i class="fa fa-cog"></i>
       <div class="container">
-        <p class="first">
+        <p id="panel-2-first" class="first">
           <strong>Sobre el propio robot en sí...</strong></br>... en esta página podrás encontrar toda la información referente a su construcción y programación. A modo de introducción nuestro robot aspirador, al que hemos bautizado como <i>Limpiosity</i>,
           se trata de un robot autómata con posibilidad de control remoto que está basado en un robot tipo Roomba. Actualmente el robot se conserva en Albacete en gran parte y cuenta con un gran set de piezas y sensores para continuar con su desarrollo.
           Si te gusta el movimiento maker, construir, programar o cacharrear en general no dudes en ponerte en contacto con nuestro formulario.
         </p>
-        <p class="last">
+        <p id="panel-2-second" class="last">
           <strong>Corría un frío septiembre en 2013...</strong></br>... y en una asignatura llamada “Sensores y actuadores” del grado de Igeniería Industrial Electrónica tres jóvenes se agruparon con el objetivo de construir el robot más asombroso jamás
           creado. Os ahorro la intriga, eso no ocurrió, pero a cambio crearon un autómata a partir de la nada, con sus propias manos y utilizando mayoritariamente elementos reciclados y baratos. De las perversas mentes de esos tres estudantiantes salió
           una bella creación capaz de moverse por sí misma, detectar objetos y esquivarlos, mostrar información en su pantalla LCD en tiempo real, emitir sonidos e incluso hacer sonar la marcha imperial.
@@ -106,9 +98,9 @@
         <figure>
           <img src="/images/slideshow/4.jpg" width="100%" />
         </figure>
-        <figure>
+        <!-- <figure>
           <img src="/images/slideshow/5.jpg" width="100%" />
-        </figure>
+        </figure> -->
         <figure>
           <img src="/images/slideshow/6.jpg" width="100%" />
         </figure>
@@ -230,6 +222,7 @@
 
   <!-- build:js scripts/main.js -->
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+  <script src="https://cdn.jsdelivr.net/scrollreveal.js/3.1.1/scrollreveal.min.js"></script>
   <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
   <script type="text/javascript" src="scripts/better-simple-slideshow.min.js"></script>
   <script src="scripts/main.js"></script>

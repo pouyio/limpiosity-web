@@ -1,4 +1,9 @@
 (function initialize() {
+  // REVEAL EFFECTS https://github.com/jlmakes/scrollreveal.js
+  window.sr = ScrollReveal();
+  sr.reveal('#panel-2-first', {origin: "left", delay: "200", distance: "200px", mobile: "false", reset: "true"});
+  sr.reveal('#panel-2-second', {origin: "rigt"});
+
   // MAP
   var albacete = new google.maps.LatLng(38.9942400, -1.8564300)
   var mapProp = {
@@ -22,6 +27,7 @@
   };
   makeBSS('.bss-slides', opts);
 })();
+
 // CONTACT FORM
 function onFocus(element) {
   var lb = element.getAttribute("name");
