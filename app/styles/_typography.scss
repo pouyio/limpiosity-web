@@ -9,9 +9,13 @@ html {
     p,
     input,
     label {
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
+}
+
+body {
+  background-color: $components-background;
 }
 
 header {
@@ -111,5 +115,20 @@ footer {
     p {
       font-size: .8em;
     }
+  }
+}
+
+.components,
+.circuits,
+.code {
+  background-color: $components-background;
+
+  h1 {
+    border-bottom: double 3px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
   }
 }

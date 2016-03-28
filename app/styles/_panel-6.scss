@@ -1,4 +1,6 @@
 .panel-6 {
+  background-color: $section-title-main;
+  z-index: -1;
   position: relative;
 
   .section-title {

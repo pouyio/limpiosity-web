@@ -1,6 +1,9 @@
 .panel-2 {
+  background-color: $section-title-main;
   line-height: 1.5;
+  overflow-x: hidden;
   position: relative;
+  z-index: -1;
 
   .container {
     $margin: .6em;

@@ -6,7 +6,7 @@
     distance: "100%",
     duration: 500,
     delay: 300,
-    reset: "true",
+    reset: false,
     easing: "ease-out",
     scale: 1
   });
@@ -15,14 +15,14 @@
     distance: "100%",
     duration: 500,
     delay: 600,
-    reset: "true",
+    reset: false,
     easing: "ease-out",
     scale: 1
   });
   sr.reveal('#panel-3-fa', {
     duration: 1000,
     delay: 300,
-    reset: "true",
+    reset: false,
     easing: "ease-in-out",
     rotate: {
       z: 120
@@ -31,26 +31,26 @@
   sr.reveal('#panel-4-manu', {
     origin: "left",
     distance: "50%",
-    duration: 500,
+    duration: 600,
     delay: 300,
-    reset: "true",
+    reset: false,
     easing: "ease-out",
     scale: 1
   });
   sr.reveal('#panel-4-vicente', {
     origin: "right",
     distance: "50%",
-    duration: 500,
+    duration: 600,
     delay: 300,
-    reset: "true",
+    reset: false,
     easing: "ease-out",
     scale: 1
   });
   sr.reveal('#panel-4-david', {
     distance: "20%",
-    duration: 500,
+    duration: 600,
     delay: 300,
-    reset: "true",
+    reset: false,
     easing: "ease-out",
     scale: 1
   });

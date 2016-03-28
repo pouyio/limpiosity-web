@@ -1,6 +1,7 @@
 .panel-4 {
   $padding: 1em;
   background-color: $section-title-main;
+  overflow: hidden;
 
   .who-wrapper {
     align-items: center;
