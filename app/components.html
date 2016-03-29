@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description" content="">
@@ -10,45 +11,46 @@
   <!-- Place favicon.ico in the root directory -->
 
   <!-- build:css styles/main.css -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../styles/general.css">
+  <link rel="stylesheet" href="/styles/general.css">
   <!-- endbuild -->
 
   <!-- TODO change for production rawgit -->
   <script src="https://rawgit.com/chjj/marked/master/marked.min.js"></script>
-  <script src="scripts/components.js"></script>
+  <script src="scripts/load-content.js"></script>
 
 </head>
-  <body>
-    <header>
-      <nav role="navigation" id="nav" class="nav-bar">
-        <input class="trigger" type="checkbox" id="mainNavButton">
-        <label for="mainNavButton" onclick><a href="/index.html">Limpiosity</a></label>
-        <ul>
-          <li class="logo"><a href="/index.html">Limpiosity</a></li>
-          <li><a href="/components.html">Componentes</a></li>
-          <li><a href="/circuits.html">Circuitos</a></li>
-          <li><a href="/code.html">Código</a></li>
-        </ul>
-        </ul>
-      </nav>
-    </header>
 
-    <div id="md-content" class="components wrapper top">
-      <script>
-        loadComponents();
+<body>
+  <header>
+    <nav role="navigation" id="nav" class="nav-bar">
+      <input class="trigger" type="checkbox" id="mainNavButton">
+      <label for="mainNavButton" onclick><a href="./index.html">Limpiosity</a></label>
+      <ul>
+        <li class="logo"><a href="./index.html">Limpiosity</a></li>
+        <li><a href="./components.html">Componentes</a></li>
+        <li><a href="./circuits.html">Circuitos</a></li>
+        <li><a href="./code.html">Código</a></li>
+      </ul>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="md-content" class="components wrapper top">
+    <script>
+      load("components");
+    </script>
+  </div>
+
+  <footer>
+    <p class="first">
+      <script type="text/javascript">
+        document.write("Limpiosity " + new Date().getFullYear());
       </script>
-    </div>
+    </p>
+    <p class="second">
+      Diseño: Vicente Ortiz
+    </p>
+  </footer>
+</body>
 
-    <footer>
-      <p class="first">
-        <script type="text/javascript">
-          document.write("Limpiosity " + new Date().getFullYear());
-        </script>
-      </p>
-      <p class="second">
-        Diseño: Vicente Ortiz
-      </p>
-    </footer>
-  </body>
 </html>

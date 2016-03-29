@@ -1,5 +1,5 @@
 # COMPONENTES
-En esta sección se encuentra toda la docuemtanción relacionada con los componentes electrónicos utilizados. Se describen sus características y el uso que se le dieron así como su relación con los demás elementos. Este bloque se divide en [Procesamiento](#), [Sensores](#) y [Actuadores](#).
+En esta sección se encuentra toda la docuemtanción relacionada con los componentes electrónicos utilizados. Se describen sus características y el uso que se le dieron así como su relación con los demás elementos. Este bloque se divide en [Procesamiento](#procesamiento), [Sensores](#sensores) y [Actuadores](#actuadores).
 
 ## PROCESAMIENTO
 Para el proesamiento se ha optado por utilizar la plataforma Arduino, que si bien, no está orientada para propósito comerial, si que lo está para realizar prototipos de una manera senilla debido a sus onexiones, y failidad de programaión del miroontrolador en ambos asos de la familia AVR. Se han usado dos plaas Arduino, una para el ontrol autómata del robot, y otra para el mando a distania que ontrola su enendido y ontrol remoto.
@@ -50,7 +50,7 @@ Para el funionamiento de este dispositivo se ha reado una librería uyo prinipio
 |:---:|:---:|
 
 ### LCD
-Una LCD es una pantalla de ristal líquido donde mostramos informaión dirigida desde el arduino. Consta de 4 las y 20 olumnas.
+Una LCD es una pantalla de ristal líquido donde mostramos informaión dirigida desde el arduino. Consta de 4 las y 20 columnas.
 ![LCD](../images/components/LCD.png)
 
 ### Emisor/Receptor RF

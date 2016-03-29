@@ -101,3 +101,8 @@ function focusLost(element) {
     label.style.color = "initial";
   }
 }
+
+function scroll() {
+  var element = document.getElementById("panel-2");
+  element.scrollIntoView({behavior: "smooth"});
+}

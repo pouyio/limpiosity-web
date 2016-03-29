@@ -2,7 +2,7 @@
   padding: 0 1em;
 
   &::before {
-    background: url('/images/limpiosity.jpg') center / 100% no-repeat;
+    background: url('../images/limpiosity.jpg') center / 100% no-repeat;
     background-color: $panel-1-bg-callback;
     background-repeat: no-repeat;
     content: '';

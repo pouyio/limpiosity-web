@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,300');
+@import url('https://fonts.googleapis.com/css?family=Raleway:800,700italic');
 
 html {
   font-family: 'Muli', sans-serif;
@@ -36,7 +37,8 @@ header {
   text-shadow: 0 0 .5em $text-shadow-dark;
 
   h1 {
-    font-size: 4.3rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.5rem;
 
     @include breakpoint(mobile) {
       font-size: 3.5rem;
@@ -125,10 +127,32 @@ footer {
 
   h1 {
     border-bottom: double 3px;
+    font-family: 'Raleway';
+    font-size: 2.5rem;
     text-align: center;
+
+    @include breakpoint(mobile) {
+      font-size: 2.1rem;
+    }
   }
 
   h2 {
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+    font-weight: 800;
     text-align: center;
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  h3 {
+    font-family: 'Raleway';
+    font-weight: 700;
+  }
+
+  p {
+    line-height: 1.25;
   }
 }
