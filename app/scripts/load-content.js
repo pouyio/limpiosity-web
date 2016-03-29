@@ -1,7 +1,7 @@
 // Markdown parser for JS https://github.com/chjj/marked
 function load(file) {
   var mdFile = new XMLHttpRequest();
-  mdFile.open("GET", "/scripts/" + file + ".md", true);
+  mdFile.open("GET", "./markdown/" + file + ".md", true);
   mdFile.send();
   mdFile.onreadystatechange = function() {
     // Makes sure the document exists and is ready to parse.

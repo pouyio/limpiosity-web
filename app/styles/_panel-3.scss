@@ -3,6 +3,7 @@
   $bg-icons-size: 15rem;
   background-color: $section-title-compl;
   position: relative;
+  z-index: -1;
 
   figure {
     margin: 0;
