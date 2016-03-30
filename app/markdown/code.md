@@ -1,60 +1,48 @@
 # CODE
-En esta sección se encuentra toda la docuemtanción relacionada con los componentes electrónicos utilizados. Se describen sus características y el uso que se le dieron así como su relación con los demás elementos. Este bloque se divide en [Procesamiento](#), [Sensores](#) y [Actuadores](#).
+En esta sección se hace un breve resumen de cómo se estructuró toda la programación y su por qué. Todos los archivos de código están almacenados en el repositorio de Limpiosity en Github al que puedes acceder para un mayor detalle.
+[![github](../images/code/github.png)](https://github.com/pouyio/limpiosity)
 
-## PROCESAMIENTO
-Para el proesamiento se ha optado por utilizar la plataforma Arduino, que si bien, no está orientada para propósito comerial, si que lo está para realizar prototipos de una manera senilla debido a sus onexiones, y failidad de programaión del miroontrolador en ambos asos de la familia AVR. Se han usado dos plaas Arduino, una para el ontrol autómata del robot, y otra para el mando a distania que ontrola su enendido y ontrol remoto.
+## PROGRAMACIÓN ORIENTADA A OBJETOS
+La Programaión Orienta a Ob jetos o POO, es un paradigma de programaión que nos permite diseñar programas más eientes y de manera más lara que utilizando estruturas o otro tipo de ténia. Conseguimos además que nuestro programa prinipal tenga muy poas líneas y se base en la reaión de los ob jetos, modi- aión de sus atributos y utilizaión de sus métodos.
 
-### Arduino Mega
-El Arduino Mega es una plaa miroontrolador basada ATmeg1280. Tiene 54 entradas/salidas digitales (de las uales 14 proporionan salida PWM), 16 entradas digitales, 4 UARTS (puertos serie por hardware), un ristal osilador de 16MHz, onexión USB, entrada de orriente, onetor ICSP y botón de reset.
-![arduino mega](../images/components/arduino-mega.png)
+Quizás en este proyeto no era del todo neesario la reaión de nuestras propias librerías on este método, pero a nivel de aprendiza je se ha optado por realizarlo de este modo y poder apliarlo a un proyeto real. El lengua je esogido ha sido C++.
 
-### Arduino Uno
-El Arduino Uno es un miroontrolador basado en el ATmega328. Tiene 14 salidas digitales de entrada/salida (6 de las uales pueden ser usadas omo PWM), 6 analógias, un ristal a 16MHz, onexión USB, entradas ICSP y botoón de reset. Se distingue de sus predeesores en que no usa el FTDI USB-to-serial driver hip. En su lugar usa un Atmega8U2.
-![arduino uno](../images/components/arduino-uno.png)
+## LIBRERÍAS
+La plataforma Arduino se arateriza por la antidad de librerías disponibles que existen para realizar de manera muy senilla funiones que impliarían un mayor desarrollo. Sin embargo en oasiones se neesita alguna funión más espeía y no es posible implementarla de forma senilla. Es por ello que hemos reado algunas de estas librerías para failitar la letura y uso del programa por personas on diferentes onoimientos y niveles de programaión.
 
----
+Para rear una librería en Arduino, es neesario rear una abeera, un arhivo de tipo .h donde se inluye el nombre de la lase, sus atributos y sus métodos y un arhivo .pp donde se desarrollan estas funiones que desarrolla el software. Se crearon tres librerías propias para el proyecto:
++ **Motor**: Encargada de hacer que los motores girasen en un sentido y tiempo determinado.
++ **Piezo**: Encargada de generar los tonos y melodías.
++ **Ultrasounds**: Controla tanto la distancia mínima de decisión de objetos, como la evaluación de esta distancia con la distancia rela al objeto.
 
-## SENSORES
+##  PROGRAMACIÓN POR INTERRUPCIONES
+El uso de interrupiones en miroontroladores es un reurso muy usado para diversos esenarios de traba jo omo por ejemplo la ejeuión de una subrutina de evento rítio,la temporizaión de eventos mediante Timers, la atenión de proesos en tiempo real.
 
-### Ultrasonidos
-Los sensores de ultrasonidos son detetores de proximidad que detetan ob jetos a distanias variables según el tipo de sensor. Estos reejan en un ob jeto, el sensor reibe el eo produido y lo onvierte en señales elétrias, las uales son elaboradas en el aparato de valoraión. Estos sensores traba jan solamente en el aire, y pueden detetar ob jetos on diferentes formas, olores, superies y de diferentes materiales. Los materiales pueden ser sólidos, líquidos o polvorientos, sin embargo han de ser deetores de sonido. Los sensores traba jan según el tiempo de transurso del eo, es deir, se valora la distania temporal entre el impulso de emisión y el impulso del eo. En nuestro aso, hemos usado tres sensores de ultrasonidos para ubrir un ampo de más de unos 220º aproximadamente. Esto se ha heho así, para disernir entre varios modos de funionamiento según se ative un detetor u otro, omo por ejemplo el modo para esapar de esquinas, para detetar un ob jeto móvil que aaba de ruzarse et. El modelo de ultrasonidos elegido ha sido el SRF04. Este sensor es apaz de detetar ob jetos y alular la distania a la que se enuentran en un rango de 3 a 300 m. Contiene toda la eletrónia enargada de haer la mediión. Su uso es tan senillo omo enviar el pulso de arranque y medir la anhura del pulso de retorno. De muy pequeño tamaño, SRF04 destaa por su ba jo onsumo, gran preisión y ba jo preio.
+En nuestro aso usaremos las interrupiones para la realizaión de tareas dependientes de mediiones de variaión infreuente,en onreto, la administraión de los LEDs de presenia a través de la medida de la LDR.Es evidente que la iluminaión en el ámbito de traba jo de nuestro proyeto no tendá ambios freuentes, omo muho, un ambio de habitaión o la aída de la nohe,es por esto, que la onstante mediión de la LDR para la administraión de los LEDs de presenia supondría un derrohe de operaiones y tiempo en términos de la omputaión o senillamente, una soluión poo elegante.
 
-| ![srf05](../images/components/srf05.png) | ![ultrasonidos](../images/components/ultrasonidos.png)  |
-|:---:|:---:|
+Es por ello que usaremos un iruito de aondiionamiento de la LDR,expliado en el apartado sobre la LDR, para obtener una salida lógia omo resultado de una variaión en la intensidad lumínia. Esta salida lógia provoará una interrupión uya rutina de interrupión será la administraión de los LEDs. Para la programaión de interrupiones Arduino uenta on funiones espeías de armado y onguraión de interrupiones.En nuestro aso sólo habremos de introduir el siguiente ódigo en el programa prinipal:
+```C++
+attahInterrupt(0 ,LDRUP,CHANGE );
+```
+Donde el primer parámetro,0, hae referenia al pin de interrupión,el segundo parámetro ,LDRUP,india la rutina de interrupión a ejeutar y el terer parámetro,CHANGE,india el tipo de evento que provoará la interrupión. A ontinuaión se muestra un ejemplo de programaión on uso de interrupiones:
+```c
+#include <iostream>
 
-### LDR
-Son las siglas de Light-Dependent Resistor. Es una fotorresistenia, un omponente eletrónio uya resistenia disminuye on el aumento de intensidad de luz inidente. Su uerpo está formado por una élula o elda y dos patillas. El modelo usado para nuestro proyeto ha sido el GL5528 uyas araterístias son:
-+ Resistenia (on luz) : ~1k Ohm
-+ Resistenia (osuridad): ~10k Ohm
-+ Vmax : 150V
-+ Disipaión: 100mW max
+using namespace std;
 
-| ![LDR](../images/components/LDR.png) | ![LDR-1](../images/components/LDR-1.png)  |
-|:---:|:---:|
+int main()
+{
+   cout<<"¡Hola mundo!";
+   return 0 ;
+}
+```
+## MANDO A DISTANCIA
+### Modo de control automático
+El modo automátio se ativa y desativa desde el mando a distania. Este método se basa en la deteión de obstáulos graias a los sensores de ultrasonidos. El robot omienza on una melodía antes de iniiar este modo, tras el que omienza a moverse en línea reta hasta que uno de los tres sensores que están dispuestos deteta un obstáulo. Según el sensor que haya detetado este obstáulo, el ual estará a una distania menor o igual a 15 m, el robot realizará un movimiento u otro. Tenemos los siguientes modos:
++ **Deteión sensor izquierda**: El robot se parará y girará 60º aproximadamente haia la dereha y seguirá avanzando en línea reta.
++ **Deteión sensor dereha**: El robot se parará y girará 60º aproximadamente haia la izquierda y seguirá avanzando en línea reta.
++ **Deteión sensor izquierda** y dereha: En este supuesto, damos por heho que nos enontramos en una esquina, por lo que el robot girará algo más de 180º.
++ **Deteión de los tres sensores a la vez**: Suponemos que un obstáulo omo una masota o una persona se ha interpuesto en el amino. El robot parará y girará 180º.
 
----
-
-## ACTUADORES
-
-### Motores
-Los motores esogidos para la parte motriz del robot, son motores de orriente ontinua de 12 voltios. Un motor de , es una máquina que onvierte la energía elétria en meánia, provoando un movimiento rotatorio. Una máquina de orriente ontinua (generador o motor) se ompone prinipalmente de dos partes:Un estátor que da soporte meánio al aparato y tiene un hueo en el entro generalmente de forma ilíndria. En el estátor además se enuentran los polos, que pueden ser de imanes permanentes o devanados on hilo de obre sobre núleo de hierro. El rotor es generalmente de forma ilíndria, también devanado y on núleo, al que llega la orriente mediante dos esobillas. También se onstruyen motores de CC on el rotor de imanes permanentes para apliaiones espeiales. El heho de utilizar este tipo de motores en lugar de motores paso a paso por ejemplo es por la simpliidad de onexión, la disponibilidad de los mismos y la failidad de programaión de los mismo junto on un puente en H que desribiremos a continuaión.
-
-| ![motor](../images/components/motor.png) | ![motor y rueda](../images/components/motor-1.png)  |
-|:---:|:---:|
-
-### Piezo
-Los sensores piezoelétrios basados en el efeto piezoelétrio el ual produe un potenial elétrio a partir de modiar una de sus propiedades físias. En este aso es usado para produir una serie de sonidos que indian el inicio de la puesta en marha del robot, así omo una boina que suena en el modo manual por movimiento on radio freuenia.
-Para el funionamiento de este dispositivo se ha reado una librería uyo prinipio de funionamientos se expliará más adelante. Está basado en la alternania del enendido y el apagado de un pin de salida de manera que alulando este número de enendidos y apagados variemos el valor de freuenia, equivalente a una nota.
-
-| ![piezo](../images/components/piezo-1.png) | ![piezo](../images/components/piezo.png)  |
-|:---:|:---:|
-
-### LCD
-Una LCD es una pantalla de ristal líquido donde mostramos informaión dirigida desde el arduino. Consta de 4 las y 20 olumnas.
-![LCD](../images/components/LCD.png)
-
-### Emisor/Receptor RF
-Comuniaión inalámbria on módulos RX-TX A315, se compone de dos módulos, el emisor y el receptor. Dado que ambos dispositivos se usan por separado y a distancia, el receptro se conecta en el propio robot mientras que el emisor se usa con otro arduino, que hará de control remoto.
-![RF](../images/components/rf.png)
-
-La comuniaión de estos módulos on el mirocontrolador al ual estén conetados se realiza mediante un pin digital ualquiera de la plaa del miroontrolador en protoolo serie. Una vez realizada la orreta onexión de los módulos,realizaremos el envio y reepión de paquetes de manera inalámbria, mediante las funiones que proporiona la librería Virtualwire. Hay que tener espeial uidado on los efetos que tiene la onguraión del módulo de reepión sobre los Timers del AVR ya que estos son usados también por los pines PWM, por ello solo habilitaremos la reepión en determinados intervalos de tiempo no onurrentes on el uso de PWM,transurrido el intervalo de reepión, deshabilitamos el módulo reeptor.
+### Modo de control manual
+El modo de ontrol manual se realiza a través de un mando a distania, el ual dispone de unos botones para moverlo haia delante, y para girar sobre sí mismo a la izquierda o la dereha. También dispone de un botón para una boina, el ual suena al apretarlo mientras que a la vez se enienden los leds del robot.

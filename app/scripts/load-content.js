@@ -8,7 +8,7 @@ function load(file) {
     if (mdFile.readyState === 4 && mdFile.status === 200) {
       var mdText = mdFile.responseText;
       document.getElementById('md-content').innerHTML =
-      marked(mdText);
+        marked(mdText);
     }
   }
 }
