@@ -1,22 +1,16 @@
 .panel-1 {
   padding: 0 1em;
 
-  &::before {
-    background: url('../images/limpiosity.jpg') center / 100% no-repeat;
-    background-color: $panel-1-bg-callback;
-    background-repeat: no-repeat;
-    content: '';
-    // filter: blur(5px);
+  .bgvid {
+    background: url('../images/limpiosity.jpg') no-repeat;
+    background-size: cover;
     height: 100vh;
     left: 0;
+    object-fit: cover;
     position: absolute;
-    right: 0;
     top: 0;
-    z-index: -1;
-
-    @include breakpoint(tablet) {
-      background-image: none;
-    }
+    width: 100%;
+    z-index: -10;
   }
 
   .my-arrow {
