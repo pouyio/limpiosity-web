@@ -55,6 +55,6 @@ Una LCD es una pantalla de ristal líquido donde mostramos informaión dirigida 
 
 ### Emisor/Receptor RF
 Comuniaión inalámbria on módulos RX-TX A315, se compone de dos módulos, el emisor y el receptor. Dado que ambos dispositivos se usan por separado y a distancia, el receptro se conecta en el propio robot mientras que el emisor se usa con otro arduino, que hará de control remoto.
-![RF](../images/components/rf.png)
+![RF](../images/components/RF.png)
 
 La comuniaión de estos módulos on el mirocontrolador al ual estén conetados se realiza mediante un pin digital ualquiera de la plaa del miroontrolador en protoolo serie. Una vez realizada la orreta onexión de los módulos,realizaremos el envio y reepión de paquetes de manera inalámbria, mediante las funiones que proporiona la librería Virtualwire. Hay que tener espeial uidado on los efetos que tiene la onguraión del módulo de reepión sobre los Timers del AVR ya que estos son usados también por los pines PWM, por ello solo habilitaremos la reepión en determinados intervalos de tiempo no onurrentes on el uso de PWM,transurrido el intervalo de reepión, deshabilitamos el módulo reeptor.
