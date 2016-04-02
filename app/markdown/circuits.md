@@ -2,18 +2,18 @@
 En esta sección se muestra todo lo relacionado con los circuitos de acondicionamiento asociados a los sensores que se han utilizado con los valores de resistencias, condensadores y otros componentes usados.
 
 ## DRIVER DE MOTORES. PUENTE EN H
-Un Puente H o Puente en H es un iruito eletrónio que permite a un motor elétrio DC girar en ambos sentidos, avane y retroeso. Son ampliamente usados en robótia y omo onvertidores de potenia. Los puentes H están disponibles omo iruitos integrados, pero también pueden onstruirse a partir de omponentes disretos.
+Un Puente H o Puente en H es un circuito electrónico que permite a un motor eléctrico DC girar en ambos sentidos, avance y retroceso. Son ampliamente usados en robótica y como convertidores de potencia. Los puentes H están disponibles como circuitos integrados, pero también pueden construirse a partir de componentes discretos.
 
-El puente en H junto on los motores de ontinua, nos permiten una movilidad total del autómata que junto on la posibilidad de la utilizaión de señales PWM del Arduino, haen de la programaión una tarea relativamente senilla. El puente en H usado para este proyeto nos permite utilizar dos motores, esta basado en el lásio puente en H L298, pero integrado en una shield para oloar sobre el arduino, lo que nos failita enormemente la estabilidad del mismo,así omo una ompataión mayor de la eletrónia.
+El puente en H junto con los motores de continua, nos permiten una movilidad total del autómata que junto con la posibilidad de la utilización de señales PWM del Arduino, hacen de la programación una tarea relativamente sencilla. El puente en H usado para este proyecto nos permite utilizar dos motores, esta basado en el clásio puente en H L298, pero integrado en una shield para colocar sobre el arduino, lo que nos facilita enormemente la estabilidad del mismo, así como una compactación mayor de la electrónica.
 ![driver de motores](./images/circuits/driver.png)
 
 ## PUENTE DE WEATHSTONE Y COMPARADOR POR HISTÉRESIS
 Compuesto por:
 + LDR
-+ Poteniometro 10K
-+ 2 Resistenias 6.4K
-+ 2 Resistenias 10K
-+ 1 Resistenia 100K
++ Potenciómetro 10K
++ 2 Resistencias 6.4K
++ 2 Resistencias 10K
++ 1 Resistencia 100K
 + Condensador de 0.1uF
 + Comparador LM311
 
@@ -22,13 +22,13 @@ Conexiones externas de funcionamiento:
 + VCC
 + GND
 
-El circuito es una configuración de puente de Wheatstone on las 2 resistenias de 6.4K, LDR y p oteniometro, este último para a justar la tensión de oset de salida del puente:
+El circuito es una configuración de puente de Wheatstone con las 2 resistencias de 6.4K, LDR y p potenciómetro, este último para a justar la tensión de offset de salida del puente:
 ![esquema weathstone](./images/circuits/weathstone-esquema.png)
 
-Introduimos las salidas del puente a las entradas V+ y V- del omparador LM311. La Histéresis del omparador será a justada on las resistenias de R1 y R2. La salida del omparador será introduida en el Pin Digital de Arduino que se desee.Este, reibirá un valor lógio en funión de la antidad de luz a la que la LDR sea expuesta.Graias a esto podremos generar una interrupión en el miroontrolador para el ontrol de los LEDs de iluminaión sin tener que evaluar el valor  óhmio de la LDR de manera onstante.Ampliaremos este onepto en la seión dediada a las interrupiones.
+Introducimos las salidas del puente a las entradas V+ y V- del comparador LM311. La Histéresis del comparador será a justada con las resistencias de R1 y R2. La salida del comparador será introducida en el Pin Digital de Arduino que se desee. Este, recibirá un valor lógico en función de la cantidad de luz a la que la LDR sea expuesta. Gracias a esto podremos generar una interrupción en el microcontrolador para el control de los LEDs de iluminación sin tener que evaluar el valor  óhmico de la LDR de manera constante. Ampliaremos este concepto en la sección dedicada a las interrupciones.
 
 ## REGULADOR DE TENSIÓN LM317
-Compuesto por el regulador de tensión LM317 y las resistencias de ajuste. La introduión del regulador LM317 en nuestro proyeto surge tras la imposibilidad de la plaa Arduino para alimentar,reordemos que esta plaa puede suministrar un máximo de 500 mA, todos los sensores y atuadores que hasta el momento estaban siendo alimentados por ella. Para soluionar el problema menionado se deidió agregar otra batería de 6V (1,5V de ada pila x 4),a que ya usábamos para alimentar Arduino. Esta nueva fuente alimentaría los ultrasonidos y el módulo de reepión de radiofreuenia, ambos, omo la mayoría de los dispositivos eletrónios, on un volta je reomendado de 5V. Para la obtenión de 5V a través de la fuente de 6V senillamente se tuvo que aondiionar el regulador LM317 on las resistenias adeuadas omo muestra la siguiente figura. El circuito usado es análogo pero prescindiendo del condensador dada la gran estabilidad de los 6V de la fuente de tensión.
+Compuesto por el regulador de tensión LM317 y las resistencias de ajuste. La introducción del regulador LM317 en nuestro proyecto surge tras la imposibilidad de la placa Arduino para alimentar, recordemos que esta placa puede suministrar un máximo de 500 mA, todos los sensores y actuadores que hasta el momento estaban siendo alimentados por ella. Para solucionar el problema mencionado se decidió agregar otra batería de 6V (1,5V de cada pila x 4),a que ya usábamos para alimentar Arduino. Esta nueva fuente alimentaría los ultrasonidos y el módulo de recepción de radiofrecuencia, ambos, como la mayoría de los dispositivos electrónicos, con un voltaje recomendado de 5V. Para la obtención de 5V a través de la fuente de 6V sencillamente se tuvo que acondicionar el regulador LM317 con las resistencias adecuadas como muestra la siguiente figura. El circuito usado es análogo pero prescindiendo del condensador dada la gran estabilidad de los 6V de la fuente de tensión.
 ![regulador de tensión LM317](./images/circuits/LM317.png)
 
 ## CONTROL REMOTO
@@ -41,7 +41,7 @@ Compuesto por:
 + Switches
 + Resistencias
 
-Usaremos esta unidad para ontrolar tanto el modo de funionamiento, omo los movimientos,dentro del modo manual,del robot. Ofreeremos tres modos de funionamiento:
-+ **Modo Parada**: El robot no realizará tarea alguna y permaneerá a la espera de un ambio de modo onsumiendo la mínima energía.
-+ **Modo Movimiento automátio**: El robot omenzará a moverse por el espaio atendiendo a sus sensores de ultrasonidos para evitar olisiones mientras aspira.
-+ **Modo Movimiento manual**: El usuario puede ontrolar los movimientos del robot mediante los botones del módulo de ontrol remoto.
+Usaremos esta unidad para controlar tanto el modo de funcionamiento, como los movimientos, dentro del modo manual, del robot. Ofreceremos tres modos de funcionamiento:
++ **Modo Parada**: El robot no realizará tarea alguna y permanecerá a la espera de un cambio de modo consumiendo la mínima energía.
++ **Modo Movimiento automático**: El robot comenzará a moverse por el espacio atendiendo a sus sensores de ultrasonidos para evitar colisiones mientras aspira.
++ **Modo Movimiento manual**: El usuario puede controlar los movimientos del robot mediante los botones del módulo de control remoto.

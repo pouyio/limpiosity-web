@@ -72,7 +72,10 @@
 
   // SLIDESHOW
   var opts = {
-    auto: false,
+    auto: {
+      speed: 3000,
+      pauseOnHover: true
+    },
     fullScreen: false,
     swipe: true
   };
@@ -104,5 +107,7 @@ function focusLost(element) {
 
 function scroll() {
   var element = document.getElementById("panel-2");
-  element.scrollIntoView({behavior: "smooth"});
+  element.scrollIntoView({
+    behavior: "smooth"
+  });
 }

@@ -7,6 +7,17 @@
 
   figure {
     margin: 0;
+
+    > figcaption::before {
+      content: '\f04b';
+      font-family: FontAwesome;
+      font-size: .8em;
+    }
+
+    &:hover > figcaption::before {
+      content: '\f04d';
+      font-family: Fontawesome;
+    }
   }
 
   // SLIDESHOW FROM https://github.com/leemark/better-simple-slideshow

@@ -3,24 +3,24 @@ En esta sección se hace un breve resumen de cómo se estructuró toda la progra
 [![github](../images/code/github.png)](https://github.com/pouyio/limpiosity)
 
 ## PROGRAMACIÓN ORIENTADA A OBJETOS
-La Programaión Orienta a Ob jetos o POO, es un paradigma de programaión que nos permite diseñar programas más eientes y de manera más lara que utilizando estruturas o otro tipo de ténia. Conseguimos además que nuestro programa prinipal tenga muy poas líneas y se base en la reaión de los ob jetos, modi- aión de sus atributos y utilizaión de sus métodos.
+La Programación Orientada Objetos o POO, es un paradigma de programación que nos permite diseñar programas más eficientes y de manera más clara que utilizando estructuras u otro tipo de técnica. Conseguimos además que nuestro programa principal tenga muy poas líneas y se base en la creación de los objetos, modificación de sus atributos y utilización de sus métodos.
 
-Quizás en este proyeto no era del todo neesario la reaión de nuestras propias librerías on este método, pero a nivel de aprendiza je se ha optado por realizarlo de este modo y poder apliarlo a un proyeto real. El lengua je esogido ha sido C++.
+Quizás en este proyecto no era del todo necesario la creación de nuestras propias librerías con este método, pero a nivel de aprendizaje se ha optado por realizarlo de este modo y poder aplicarlo a un proyecto real. El lenguaje escogido ha sido C++.
 
 ## LIBRERÍAS
-La plataforma Arduino se arateriza por la antidad de librerías disponibles que existen para realizar de manera muy senilla funiones que impliarían un mayor desarrollo. Sin embargo en oasiones se neesita alguna funión más espeía y no es posible implementarla de forma senilla. Es por ello que hemos reado algunas de estas librerías para failitar la letura y uso del programa por personas on diferentes onoimientos y niveles de programaión.
+La plataforma Arduino se caracteriza por la cantidad de librerías disponibles que existen para realizar de manera muy sencilla funciones que implicarían un mayor desarrollo. Sin embargo en ocasiones se necesita alguna función más específica y no es posible implementarla de forma sencilla. Es por ello que hemos creado algunas de estas librerías para facilitar la lectura y uso del programa por personas con diferentes conocimientos y niveles de programación.
 
-Para rear una librería en Arduino, es neesario rear una abeera, un arhivo de tipo .h donde se inluye el nombre de la lase, sus atributos y sus métodos y un arhivo .pp donde se desarrollan estas funiones que desarrolla el software. Se crearon tres librerías propias para el proyecto:
+Para crear una librería en Arduino, es necesario crear una cabecera, un archivo de tipo .h donde se incluye el nombre de la clase, sus atributos y sus métodos y un archivo .pp donde se desarrollan estas funciones que desarrolla el software. Se crearon tres librerías propias para el proyecto:
 + **Motor**: Encargada de hacer que los motores girasen en un sentido y tiempo determinado.
 + **Piezo**: Encargada de generar los tonos y melodías.
-+ **Ultrasounds**: Controla tanto la distancia mínima de decisión de objetos, como la evaluación de esta distancia con la distancia rela al objeto.
++ **Ultrasounds**: Controla tanto la distancia mínima de decisión de objetos, como la evaluación de esta distancia con la distancia real al objeto.
 
 ##  PROGRAMACIÓN POR INTERRUPCIONES
-El uso de interrupiones en miroontroladores es un reurso muy usado para diversos esenarios de traba jo omo por ejemplo la ejeuión de una subrutina de evento rítio,la temporizaión de eventos mediante Timers, la atenión de proesos en tiempo real.
+El uso de interrupciones en microcontroladores es un recurso muy usado para diversos escenarios de trabajo como por ejemplo la ejecución de una subrutina de evento crítico, la temporización de eventos mediante Timers, la atención de procesos en tiempo real.
 
-En nuestro aso usaremos las interrupiones para la realizaión de tareas dependientes de mediiones de variaión infreuente,en onreto, la administraión de los LEDs de presenia a través de la medida de la LDR.Es evidente que la iluminaión en el ámbito de traba jo de nuestro proyeto no tendá ambios freuentes, omo muho, un ambio de habitaión o la aída de la nohe,es por esto, que la onstante mediión de la LDR para la administraión de los LEDs de presenia supondría un derrohe de operaiones y tiempo en términos de la omputaión o senillamente, una soluión poo elegante.
+En nuestro caso usaremos las interrupciones para la realización de tareas dependientes de mediciones de variación infrecuente, en concreto, la administración de los LEDs de presencia a través de la medida de la LDR. Es evidente que la iluminación en el ámbito de trabajo de nuestro proyecto no tendrá cambios frecuentes, como mucho, un cambio de habitación o la caída de la noche, es por esto, que la constante medición de la LDR para la administración de los LEDs de presencia supondría un derroche de operaciones y tiempo en términos de la computación o sencillamente, una solución poco elegante.
 
-Es por ello que usaremos un iruito de aondiionamiento de la LDR,expliado en el apartado sobre la LDR, para obtener una salida lógia omo resultado de una variaión en la intensidad lumínia. Esta salida lógia provoará una interrupión uya rutina de interrupión será la administraión de los LEDs. Para la programaión de interrupiones Arduino uenta on funiones espeías de armado y onguraión de interrupiones.En nuestro aso sólo habremos de introduir el siguiente ódigo en el programa prinipal:
+Es por ello que usaremos un circuito de acondicionamiento de la LDR, explicado en el apartado sobre la LDR, para obtener una salida lógica como resultado de una variación en la intensidad lumínica. Esta salida lógica provocará una interrupción cuya rutina de interrupción será la administración de los LEDs. Para la programación de interrupciones Arduino cuenta con funciones específicas de armado y configuración de interrupciones. En nuestro caso sólo habremos de introducir el siguiente código en el programa principal:
 ```C++
 attahInterrupt(0 ,LDRUP,CHANGE );
 ```
@@ -38,11 +38,11 @@ int main()
 ```
 ## MANDO A DISTANCIA
 ### Modo de control automático
-El modo automátio se ativa y desativa desde el mando a distania. Este método se basa en la deteión de obstáulos graias a los sensores de ultrasonidos. El robot omienza on una melodía antes de iniiar este modo, tras el que omienza a moverse en línea reta hasta que uno de los tres sensores que están dispuestos deteta un obstáulo. Según el sensor que haya detetado este obstáulo, el ual estará a una distania menor o igual a 15 m, el robot realizará un movimiento u otro. Tenemos los siguientes modos:
-+ **Deteión sensor izquierda**: El robot se parará y girará 60º aproximadamente haia la dereha y seguirá avanzando en línea reta.
-+ **Deteión sensor dereha**: El robot se parará y girará 60º aproximadamente haia la izquierda y seguirá avanzando en línea reta.
-+ **Deteión sensor izquierda** y dereha: En este supuesto, damos por heho que nos enontramos en una esquina, por lo que el robot girará algo más de 180º.
-+ **Deteión de los tres sensores a la vez**: Suponemos que un obstáulo omo una masota o una persona se ha interpuesto en el amino. El robot parará y girará 180º.
+El modo automático se activa y desatiba desde el mando a distancia. Este método se basa en la detección de obstáculos gracias a los sensores de ultrasonidos. El robot comienza con una melodía antes de iniciar este modo, tras el que comienza a moverse en línea reta hasta que uno de los tres sensores que están dispuestos detecta un obstáculo. Según el sensor que haya detectado este obstáculo, el cual estará a una distancia menor o igual a 15 cm, el robot realizará un movimiento u otro. Tenemos los siguientes modos:
++ **Detección sensor izquierda**: El robot se parará y girará 60º aproximadamente hacia la derecha y seguirá avanzando en línea reta.
++ **Detección sensor derecha**: El robot se parará y girará 60º aproximadamente hacia la izquierda y seguirá avanzando en línea reta.
++ **Detección sensor izquierda** y derecha: En este supuesto, damos por hecho que nos encontramos en una esquina, por lo que el robot girará algo más de 180º.
++ **Detección de los tres sensores a la vez**: Suponemos que un obstáculo como una mascota o una persona se ha interpuesto en el camino. El robot parará y girará 180º.
 
 ### Modo de control manual
-El modo de ontrol manual se realiza a través de un mando a distania, el ual dispone de unos botones para moverlo haia delante, y para girar sobre sí mismo a la izquierda o la dereha. También dispone de un botón para una boina, el ual suena al apretarlo mientras que a la vez se enienden los leds del robot.
+El modo de control manual se realiza a través de un mando a distancia, el cual dispone de unos botones para moverlo hacia delante, y para girar sobre sí mismo a la izquierda o la derecha. También dispone de un botón para una boina, el cual suena al apretarlo mientras que a la vez se encienden los leds del robot.
