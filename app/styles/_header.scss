@@ -33,6 +33,12 @@
     }
   }
 
+  .selected {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
   .logo {
     flex: 10;
 
