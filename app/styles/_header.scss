@@ -30,6 +30,10 @@
       display: block;
       padding: .55em 1em;
       text-align: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -81,10 +85,10 @@
     &::after {
       color: $section-title-main;
       content: '\2261';
-      font-size: 1.8em;
+      font-size: 2em;
       position: absolute;
       right: 1em;
-      top: .2em;
+      top: .3em;
     }
 
     a {
