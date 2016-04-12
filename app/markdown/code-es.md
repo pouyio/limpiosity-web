@@ -55,7 +55,7 @@ void LDRUP() {
 El modo automático se activa y desactiva desde el mando a distancia. Este método se basa en la detección de obstáculos gracias a los sensores ultrasonidos. El robot comienza con una melodía antes de iniciar este modo, tras el que comienza a moverse en línea recta hasta que uno de los tres sensores que están dispuestos detecta un obstáculo. Según el sensor que haya detectado este obstáculo, el cual estará a una distancia menor o igual a 15cm, el robot realizará un movimiento u otro. Tenemos los siguientes modos:
 + **Detección sensor izquierda**: El robot se parará y girará 60º aproximadamente hacia la derecha y seguirá avanzando en línea reta.
 + **Detección sensor derecha**: El robot se parará y girará 60º aproximadamente hacia la izquierda y seguirá avanzando en línea reta.
-+ **Detección sensor izquierda** y derecha: En este supuesto, damos por hecho que nos encontramos en una esquina, por lo que el robot girará algo más de 180º.
++ **Detección sensor izquierda y derecha**: En este supuesto, damos por hecho que nos encontramos en una esquina, por lo que el robot girará algo más de 180º.
 + **Detección de los tres sensores a la vez**: Suponemos que un obstáculo como una mascota o una persona se ha interpuesto en el camino. El robot parará y girará 180º.
 
 ### Modo de control manual

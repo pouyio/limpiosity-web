@@ -34,14 +34,16 @@
         <li class="selected"><a href="./components.html">Componentes</a></li>
         <li><a href="./circuits.html">Circuitos</a></li>
         <li><a href="./code.html">Código</a></li>
+        <li>
+          <button class="language-toggle" id="language-toggle" onclick="changeLanguage(event,'components')" value="es">Es/En</button>
+        </li>
       </ul>
       </ul>
     </nav>
   </header>
-
   <div id="md-content" class="components wrapper top">
     <script>
-      load("components");
+      load("components-es");
     </script>
   </div>
 
@@ -52,7 +54,7 @@
       </script>
     </p>
     <p class="second">
-      Diseño: Vicente Ortiz
+      Vicente Ortiz
     </p>
   </footer>
 </body>
