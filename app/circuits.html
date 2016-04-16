@@ -5,7 +5,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#027391">
-  <title>Limpiosity - Circuitos</title>
+  <title data-title="circuits">Limpiosity - Circuitos</title>
 
   <link rel="favicon" href="favicon.png">
   <link rel="icon" href="favicon.png">
@@ -29,19 +29,18 @@
         <label for="mainNavButton" onclick><a href="./index.html">Limpiosity</a></label>
         <ul>
           <li class="logo"><a href="./index.html">Limpiosity</a></li>
-          <li><a href="./components.html">Componentes</a></li>
-          <li class="selected"><a href="./circuits.html">Circuitos</a></li>
-          <li><a href="./code.html">Código</a></li>
-          <li><button class="language-toggle" id="language-toggle" onclick="changeLanguage(event,'circuits')" value="es">Es/En</button></li>
+          <li><a id="components" href="./components.html">Componentes</a></li>
+          <li><a id="circuits" class="selected" href="./circuits.html">Circuitos</a></li>
+          <li><a id="code" href="./code.html">Código</a></li>
+          <li>
+            <button class="language-toggle" id="language-toggle" onclick="translateButton()" value="">Es/En</button>
+          </li>
         </ul>
         </ul>
       </nav>
     </header>
 
     <div id="md-content" class="circuits wrapper top">
-      <script>
-        load("circuits-es");
-      </script>
     </div>
 
     <footer>
@@ -51,7 +50,7 @@
         </script>
       </p>
       <p class="second">
-        Diseño: Vicente Ortiz
+        Vicente Ortiz
       </p>
     </footer>
   </body>
