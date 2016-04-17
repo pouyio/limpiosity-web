@@ -1,0 +1,29 @@
+{
+  "panel1": {
+    "subtitle": "Design and build project of a vaccum robot based on reclicled elements"
+  },
+  "panel2": {
+    "title": "Why ",
+    "first": "<strong>About the robot itself...</strong></br>...en esta página podrás encontrar toda la información referente a su construcción y programación. A modo de introducción nuestro robot aspirador, al que hemos bautizado como <i>Limpiosity</i>, se trata de un robot autómata con posibilidad de control remoto que está basado en un robot tipo Roomba. Actualmente el robot se conserva en Albacete en gran parte y cuenta con un gran set de piezas y sensores para continuar con su desarrollo. Si te gusta el movimiento maker, construir, programar o cacharrear en general no dudes en ponerte en contacto con nuestro formulario.",
+    "second": "<strong>It was a cold September in 2013...</strong></br>... y en una asignatura llamada Sensores y actuadores del grado de Igeniería Industrial Electrónica tres jóvenes se agruparon con el objetivo de construir el robot más asombroso jamás creado. Os ahorro la intriga, eso no ocurrió, pero a cambio crearon un autómata a partir de la nada, con sus propias manos y utilizando mayoritariamente elementos reciclados y baratos. De las perversas mentes de esos tres estudantiantes salió una bella creación capaz de moverse por sí misma, detectar objetos y esquivarlos, mostrar información en su pantalla LCD en tiempo real, emitir sonidos e incluso hacer sonar la marcha imperial."
+  },
+  "panel3": {
+    "title": "Gallery"
+  },
+  "panel4": {
+    "title": "Who <i class=\"fa fa-group\">",
+    "manu": "Passionate about new technologies. Although he has programmed in several languages, he is a noob. Currently learning web development",
+    "david": "Passionate about new technologies. Although he has programmed in several languages, he is a noob. Currently learning web development",
+    "vicente": "Passionate about new technologies. Although he has programmed in several languages, he is a noob. Currently learning web development"
+  },
+  "panel5": {
+    "title": "Who <i class=\"fa fa-location-arrow\"></i>",
+    "description": "Both the robot and the new parts are store in <a href=\"http://www.uclm.es/\">Universidad de Castilla la Mancha</a>, campus de Albacet, España.</br>Los espacios utilizados en el proyecto pertenecen a la politécnica de Albacete así como a la asociación universitaria <a href=\"http://qubic.es/\">Qubic</a>.</br>Como breve introducción, Qubic es una asociación formada por (ex)estudiantes que se dedican a hacer proyectos de todo tipo, de ingeniería entre ellos, y la colaboración para este robot fue uno de ellos. No dude en entrar en su web y si te gusta rodearte de gente inquieta y con ambición, ponerte en contacto con <a href=\"http://qubic.es/contacto/\">ellos</a>."
+  },
+  "panel6": {
+    "title": "Contact",
+    "name": "Name",
+    "message": "Message",
+    "button": "Send"
+  }
+}

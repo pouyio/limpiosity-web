@@ -41,16 +41,44 @@ function translateHeader(lang) {
 
 function translateContent(lang, page) {
   // Markdown parser for JS https://github.com/chjj/marked
-  var mdFile = new XMLHttpRequest();
-  mdFile.open("GET", "./markdown/" + page + "-" + lang + ".md", true);
-  mdFile.send();
-  mdFile.onreadystatechange = function() {
+  var fileName = "";
+  var file = new XMLHttpRequest();
+  if (page !== "index") {
+    fileName = page + "-" + lang + ".md";
+  } else {
+    fileName = page + "-" + lang + ".json";
+  }
+  file.open("GET", "./markdown/" + fileName, true);
+  file.send();
+  file.onreadystatechange = function() {
     // Makes sure the document exists and is ready to parse.
-    if (mdFile.readyState === 4 && mdFile.status === 200) {
-      var mdText = mdFile.responseText;
-      document.getElementById('md-content').innerHTML = marked(mdText);
+    if (file.readyState === 4 && file.status === 200) {
+      if(page !== "index") {
+        var mdText = file.responseText;
+        document.getElementById('md-content').innerHTML = marked(mdText);
+      }else {
+        translateIndex(JSON.parse(file.responseText));
+      }
     }
   }
+}
+
+function translateIndex(content) {
+  document.getElementById("panel1-subtitle").innerHTML = content.panel1.subtitle;
+  document.getElementById("panel2-title").innerHTML = content.panel2.title;
+  document.getElementById("panel-2-first").innerHTML = content.panel2.first;
+  document.getElementById("panel-2-second").innerHTML = content.panel2.second;
+  document.getElementById("panel3-title").innerHTML = content.panel3.title;
+  document.getElementById("panel4-title").innerHTML = content.panel4.title;
+  document.getElementById("panel4-manu-description").innerHTML = content.panel4.manu;
+  document.getElementById("panel4-david-description").innerHTML = content.panel4.david;
+  document.getElementById("panel4-vicente-description").innerHTML = content.panel4.vicente;
+  document.getElementById("panel5-title").innerHTML = content.panel5.title;
+  document.getElementById("panel5-description").innerHTML = content.panel5.description;
+  document.getElementById("panel6-title").innerHTML = content.panel6.title;
+  document.getElementById("name").innerHTML = content.panel6.name;
+  document.getElementById("message").innerHTML = content.panel6.message;
+  document.getElementById("panel6-button").value = content.panel6.button;
 }
 
 function translateButton() {
