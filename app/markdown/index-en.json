@@ -8,7 +8,15 @@
     "second": "<strong>It was a cold September in 2013...</strong></br>...when we were told to make a project in a subject called Sensors and actuators” of the Electronic Engineering Degree. We teamed up with the only goal in our minds of creating the most awesome creature ever built. None of that happened, but we built a robot from the ground with our own naked hands and using recycled and cheap materials. Our sick minds were able to make a beautiful creation with the ability of moving on its own, detecting and dogging them, showing information on its LCD screen in real time, making sounds and even playing the Imperial March."
   },
   "panel3": {
-    "title": "Gallery"
+    "title": " Gallery",
+    "cap1": " Painted structure",
+    "cap2": " Motor",
+    "cap3": " Arduino Mega and motor driver",
+    "cap4": " Arduino Mega and motor driver",
+    "cap8": " Installing ultrasound sensors",
+    "cap9": " Last connections",
+    "cap10": " Last connections",
+    "cap-11": " Being conscious and opening my twitter account"
   },
   "panel4": {
     "title": "Who <i class=\"fa fa-group\">",

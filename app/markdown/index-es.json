@@ -8,7 +8,15 @@
     "second": "<strong>Corría un frío septiembre en 2013...</strong></br>... y en una asignatura llamada “Sensores y actuadores” del grado de Igeniería Industrial Electrónica tres jóvenes se agruparon con el objetivo de construir el robot más asombroso jamás creado. Os ahorro la intriga, eso no ocurrió, pero a cambio crearon un autómata a partir de la nada, con sus propias manos y utilizando mayoritariamente elementos reciclados y baratos. De las perversas mentes de esos tres estudantiantes salió una bella creación capaz de moverse por sí misma, detectar objetos y esquivarlos, mostrar información en su pantalla LCD en tiempo real, emitir sonidos e incluso hacer sonar la marcha imperial."
   },
   "panel3": {
-    "title": "Galería"
+    "title": "Galería",
+    "cap1": " Estructura recién pintada",
+    "cap2": " Motor aspirador",
+    "cap3": " Arduino mega y controlador de motores",
+    "cap4": " Arduino mega y controlador de motores",
+    "cap8": " Instalando sensores ultrasonidos",
+    "cap9": " Últimas conexiones",
+    "cap10": " Últimas conexiones",
+    "cap11": " Siendo autoconsciente y haciéndome twitter"
   },
   "panel4": {
     "title": "Quién <i class=\"fa fa-group\">",

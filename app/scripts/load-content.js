@@ -69,6 +69,14 @@ function translateIndex(content) {
   document.getElementById("panel-2-first").innerHTML = content.panel2.first;
   document.getElementById("panel-2-second").innerHTML = content.panel2.second;
   document.getElementById("panel3-title").innerHTML = content.panel3.title;
+  document.getElementById("cap-1").innerHTML = content.panel3.cap1;
+  document.getElementById("cap-2").innerHTML = content.panel3.cap2;
+  document.getElementById("cap-3").innerHTML = content.panel3.cap3;
+  document.getElementById("cap-4").innerHTML = content.panel3.cap4;
+  document.getElementById("cap-8").innerHTML = content.panel3.cap8;
+  document.getElementById("cap-9").innerHTML = content.panel3.cap9;
+  document.getElementById("cap-10").innerHTML = content.panel3.cap10;
+  document.getElementById("cap-11").innerHTML = content.panel3.cap11;
   document.getElementById("panel4-title").innerHTML = content.panel4.title;
   document.getElementById("panel4-manu-description").innerHTML = content.panel4.manu;
   document.getElementById("panel4-david-description").innerHTML = content.panel4.david;
