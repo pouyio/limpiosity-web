@@ -4,7 +4,7 @@
   overflow: hidden;
 
   .who-wrapper {
-    align-items: center;
+    align-items: stretch;
     display: flex;
     flex-direction: row;
 
@@ -15,8 +15,9 @@
 
   .item {
     $shadows: 0 1px 5px $items-border;
-    $shadower: 0 3px 8px darken($items-border, 30%);
+    $shadower: 0 3px 8px darken($items-border, 35%);
     box-shadow: $shadows;
+    flex: 1;
     margin: .5em 1em;
     max-width: 30%;
     padding: .5em;

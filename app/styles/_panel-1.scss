@@ -19,6 +19,7 @@
 
   .my-arrow {
     bottom: 5%;
+    cursor: pointer;
     left: calc(50% - #{$arrow-size} / 2);
     position: absolute;
   }

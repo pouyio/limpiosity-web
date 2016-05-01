@@ -3,7 +3,7 @@
     "subtitle": "Designing and building project of a robotic vacuum cleaner based on recycled elements"
   },
   "panel2": {
-    "title": "Why ",
+    "title": "Why <i class=\"fa fa-question\"></i>",
     "first": "<strong>About the robot itself...</strong></br>...you will all the information about the the building and programming of the robot in this website. Our vacuum robot, whose name is <i>Limpiosity</i>, is an autonomous but can be also controlled with a remote and looks like a Roomba. The robot is currently stored in Albacete and counts with a big set of parts and sensors to continue being developed. If you like the maker movement, building, creating and programming go ahead and get in touch with us.",
     "second": "<strong>It was a cold September in 2013...</strong></br>...when we were told to make a project in a subject called Sensors and actuators” of the Electronic Engineering Degree. We teamed up with the only goal in our minds of creating the most awesome creature ever built. None of that happened, but we built a robot from the ground with our own naked hands and using recycled and cheap materials. Our sick minds were able to make a beautiful creation with the ability of moving on its own, detecting and dogging them, showing information on its LCD screen in real time, making sounds and even playing the Imperial March."
   },
@@ -20,8 +20,8 @@
   },
   "panel4": {
     "title": "Who <i class=\"fa fa-group\">",
-    "manu": "Passionate about new technologies. Although he has programmed in several languages, he is a noob. Currently learning web development.",
-    "david": "Passionate about new technologies. Although he has programmed in several languages, he is a noob. Currently learning web development.",
+    "manu": "Although he started studying mechanics, soon he found his path on electronics. He enjoyed an Erasmus grant in Germany where he did not only find a good job but something else, that made him stay.",
+    "david": "He shares his love with both electronics and music. He left Spain landing in Germany with an Erasmus grant without speaking a word of german and ended up working in a big tech company.",
     "vicente": "Passionate about new technologies. Although he has programmed in several languages, he is a noob. Currently learning web development."
   },
   "panel5": {

@@ -3,7 +3,7 @@
     "subtitle" : "Proyecto de diseño y construcción de un robot aspirador a base de elementos reciclados"
   },
   "panel2": {
-    "title": "Por qué",
+    "title": "Por qué <i class=\"fa fa-question\"></i>",
     "first": "<strong>Sobre el propio robot en sí...</strong></br>... en esta página podrás encontrar toda la información referente a su construcción y programación. A modo de introducción nuestro robot aspirador, al que hemos bautizado como <i>Limpiosity</i>, se trata de un robot autómata con posibilidad de control remoto que está basado en un robot tipo Roomba. Actualmente el robot se conserva en Albacete en gran parte y cuenta con un gran set de piezas y sensores para continuar con su desarrollo. Si te gusta el movimiento maker, construir, programar o cacharrear en general no dudes en ponerte en contacto con nuestro formulario.",
     "second": "<strong>Corría un frío septiembre en 2013...</strong></br>... y en una asignatura llamada “Sensores y actuadores” del grado de Igeniería Industrial Electrónica tres jóvenes se agruparon con el objetivo de construir el robot más asombroso jamás creado. Os ahorro la intriga, eso no ocurrió, pero a cambio crearon un autómata a partir de la nada, con sus propias manos y utilizando mayoritariamente elementos reciclados y baratos. De las perversas mentes de esos tres estudantiantes salió una bella creación capaz de moverse por sí misma, detectar objetos y esquivarlos, mostrar información en su pantalla LCD en tiempo real, emitir sonidos e incluso hacer sonar la marcha imperial."
   },
@@ -20,9 +20,9 @@
   },
   "panel4": {
     "title": "Quién <i class=\"fa fa-group\">",
-    "manu": "Apasionado de las nuevas tecnologías. Aunque ha programado en varias plataformas, no domina ninguna. Actualmente master noob en desarrollo web",
-    "david": "Apasionado de las nuevas tecnologías. Aunque ha programado en varias plataformas, no domina ninguna. Actualmente master noob en desarrollo web",
-    "vicente": "Apasionado de las nuevas tecnologías. Aunque ha programado en varias plataformas, no domina ninguna. Actualmente master noob en desarrollo web"
+    "manu": "Aunque coqueteó con la mecánica, pronto encontró su camino en la electrónica. Gozó de una beca Erasmus en Alemania donde encontró algo más que un buen trabajo que le hizo quedarse.",
+    "david": "Amante de la ectrónica al mismo tiempo que músico frustrado. Emigró a Alemania gracias a una beca Erasmus sin saber hablar alemán y ahora trabaja en una potente empresa de tecnología.",
+    "vicente": "Apasionado de las nuevas tecnologías. Aunque ha programado en varias plataformas, no domina ninguna. Actualmente master noob en desarrollo web."
   },
   "panel5": {
     "title": "Dónde <i class=\"fa fa-location-arrow\"></i>",
