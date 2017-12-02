@@ -1,5 +1,4 @@
-# Limpiosity website
-You can see the live version of this web [here](http://limpiosity.qubic.es).
+# Limpiosity website ([Online version 🌍](http://limpiosity.qubic.es))
 
 It has been built using:
 + [Yeoman](http://yeoman.io) with [webapp generator](https://github.com/yeoman/generator-webapp) to scaffold the web structure. It includes [gulp](http://gulpjs.com) to automate repetitive tasks.
